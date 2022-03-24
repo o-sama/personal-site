@@ -1,0 +1,157 @@
+{
+  "Languages and Tools": {
+    "Site Reliability Engineering": [
+      "AWS",
+      "Docker",
+      "Istio",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "Software Engineering": [
+      "C",
+      "CPP",
+      "CSharp",
+      "Django",
+      "Go",
+      "NodeJS",
+      "TypeScript",
+      "Java",
+      "Python",
+      "MongoDB",
+      "SQL",
+      "Gatsby"
+    ],
+    "General Tools": ["Bash", "Git"]
+  },
+  "Certifications": [
+    {
+      "certification": "AWS Certified Solutions Architect - Associate",
+      "dateAchieved": "January 2020",
+      "link": "https://www.credly.com/badges/701b5a9e-582b-4560-9909-df1c80d9334a/public_url",
+      "embedBadgeId": "701b5a9e-582b-4560-9909-df1c80d9334a",
+      "embedBadgeHost": "https://www.credly.com",
+      "embedBadgeSrc": "https://cdn.credly.com/assets/utilities/embed.js"
+    }
+  ],
+  "Previous Experience": [
+    {
+      "position": "Software Engineer - GitOps",
+      "company": "Thomson Reuters",
+      "logo": "Tr",
+      "dateRange": "May 2020 - Present",
+      "locaiton": "Toronto, Ontario, Canada",
+      "description": [
+        "Architected and led <strong>development</strong> of new Kubernetes Ingress Pattern using Network Load Balancers (NLBs); designed and implemented zero-downtime migration procedure to move from Classic Load Balancers to new NLB solution, ensuring several clusters in pre-production and production environments continued to receive traffic during migration.",
+        "Implemented Kubernetes Secret Store CSI Driver across several clusters and migrated ingress certificates from Kubernetes ExternalSecrets with zero-downtime in pre-production and production environments.",
+        "Designed and wrote several unit tests for infrastructure status and readiness using Go to verify post-deployment status through CICD Pipeline.",
+        "Provided 24/7 on-call support as part of the engineering team support rotation to customers across several production Kubernetes clusters maintaining SLA of 99.99% uptime.",
+        "Refactored several parts of the project’s Terraform repositories to make Kubernetes clusters more robust and the repositories more sustainable."
+      ]
+    },
+    {
+      "position": "Software Development Intern",
+      "company": "Thomson Reuters",
+      "logo": "Tr",
+      "dateRange": "September 2019 - December 2019",
+      "locaiton": "Toronto, Ontario, Canada",
+      "description": [
+        "Designed and developed CICD Pipeline to enable application developers to easily deploy onto the service mesh platform using AWS CodePipeline and Helm.",
+        "Developed mission-critical components of the platform using Infrastructure as Code tools such as Terraform and AWS CloudFormation.",
+        "Architected several components of production-grade Kubernetes cluster with an Istio service mesh.",
+        "Developed team’s DevOps practices using SDLC principles such as Git branching strategies and automating processes by implementing the GitOps methodology."
+      ]
+    },
+    {
+      "position": "Software Engineering Intern",
+      "company": "Flipp",
+      "logo": "Flipp",
+      "dateRange": "January 2019 - April 2019",
+      "locaiton": "Toronto, Ontario, Canada",
+      "description": [
+        "Designed core features of different parts of the Snicket platform, a net-new Event Driven MicroServices system that leverages TypeScript-Node.",
+        "Led the design on Snicket’s Database and Product Asset Management MicroService which use AWS RDS and AWS S3 respectively, providing a high business value through automating the management of product images for vendors which includes fetching, cropping, resizing, and storing the images.",
+        "Created multiple improvements and fixes to Snicket’s Docker and CircleCI environments and integrations with AWS to increase environment-propagation efficiency.",
+        "Designed unit tests and integration tests and developed them using jest in order to promote a fail often, fail fast environment and improve the reliability of Snicket."
+      ]
+    },
+    {
+      "position": "IT Student Intern",
+      "company": "London Hydro",
+      "logo": "Lh",
+      "dateRange": "September 2017 - December 2017",
+      "locaiton": "London, Ontario, Canada",
+      "description": [
+        "Overhauled design and redeveloped high priority project management portal using the Django framework for Python.",
+        "Designed and integrated portal’s data warehouse using AWS Redshift.",
+        "Automated Swagger API testing using Python.",
+        "Automatically maintained several excel spreadsheets using Python to save hours of manual labor daily."
+      ]
+    },
+    {
+      "position": "IT Systems Engineering Specialist",
+      "company": "Toyota Motor Manufacturing Canada",
+      "logo": "Tmmc",
+      "dateRange": "May 2016 - September 2016, January 2017 - May 2017",
+      "locaiton": "Cambridge, Ontario, Canada",
+      "description": [
+        "Led the development and launch of TMMC’s new Android Andon application, with deployment requested in other Toyota Manufacturing plants to improve efficiency.",
+        "Developed C# app required for 2017 Corolla launch which resulted in $500,000 annual savings.",
+        "Assisted in developing multiple automation projects using C#, ASP.NET MVC, and Jenkins to improve shop floor work, efficiency, and manpower allocation."
+      ]
+    }
+  ],
+  "Projects": [
+    {
+      "name": "Vigilant — Final Year Design Project",
+      "duration": "8 months",
+      "description": [
+        "Worked with team to create YOLO models to detect specific human postures and perform facial detection in case of potential emergencies.",
+        "Designed and created a Python backend system which lived on AWS ECS and integrated the YOLO models with it.",
+        "Integrated backend with team’s AWS Kinesis video feed to provide video frames to the detection models.",
+        "Designed and developed a simple React.JS frontend in order to display the processed video feed."
+      ]
+    },
+    {
+      "name": "Pancreatic Cancer Detection using Machine Learning",
+      "duration": "3 months",
+      "description": [
+        "Worked as part of a team of 3 to create U-Net, Convolitional Neural Networks, and Artificial Neural Networks to create and train models using open-source 3D imaging samples.",
+        "Found extremely minor success due to the complexity of the task and scarcity of data-points in the images, which are the reason that pancreatic cancer is the most difficult to detect."
+      ]
+    },
+    {
+      "name": "Road Pothole Detection System",
+      "duration": "2 months",
+      "description": [
+        "Created a mobile web-app using React.JS which turns the user’s smartphone into an Internet of Things device that provides a data-feed of velocity and acceleration vectors using the phone’s gyroscope and geolocation.",
+        "Developed a simple adaptive algorithm which attempts to predict the availability of a pothole at the driver’s current location based on the acceleration and geolocation data provided by the smartphone.",
+        "Found a success percentage of approximately 65% with limited data used to tune the algorithm."
+      ]
+    },
+    {
+      "name": "Kirsch Edge Detector",
+      "duration": "1 month",
+      "description": [
+        "Designed Dataflow Diagram based off algebraic optimizations in order to detect edges in a pixel matrix through 3x3 convolution tables.",
+        "Implemented the design in VHDL and applied hardware optimizations at the bit level in order to maximize clock speed and minimize circuit area.",
+        "Used Intel Quartus Prime and ModelSim to debug the FPGA and further improve efficiency."
+      ]
+    }
+  ],
+  "Education": {
+    "school": "University of Waterloo",
+    "location": "Waterloo, Ontario, Canada",
+    "degree": "Bachelor of Applied Science in Computer Engineering Honours Program",
+    "graduationDate": "May 2020",
+    "specialtyCourses": [
+      "Cooperative and Adaptive Algorithms",
+      "Computational Intelligence",
+      "Internet of Things",
+      "Compilers",
+      "Computer Security",
+      "Cryptography and System Security",
+      "Algorithm Design and Analysis",
+      "Computer Networks"
+    ]
+  }
+}

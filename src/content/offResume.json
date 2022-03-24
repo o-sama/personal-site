@@ -1,0 +1,18 @@
+{
+  "possibleRemovals": {
+    "Other": ["Assembly", "VHDL"]
+  },
+  "about": [
+    "I'm a software engineer based in Toronto with 5 years of overall experience in software engineering.",
+    "My focus area for the past couple of years has been Site Reliability Engineering  specializing in Kubernetes, but I'm also skilled in back-end development with Go, Python, and Typescript Node."
+  ],
+  "skills": [
+    "Highly skilled in AWS, cloud-native technology and infrastructure.",
+    "Experienced with architecting solutions to use Infrastructure as Code tools, such as Terraform and AWS CloudFormation to automate infrastructure management and reduce manual workload.",
+    "Experienced with Architecting and developing MicroServices.",
+    "Skilled with both Containerization and Container Orchestration Systems, specifically Kubernetes.",
+    "Knowledge with Distributed Messaging Systems, such as Kafka.",
+    "Experienced in Full Stack Web Development.",
+    "Extensive experience designing and implementing both unit and integration tests."
+  ]
+}
