@@ -86,6 +86,7 @@ const IndexPage = () => {
             span={3}
             style={{
               height: "100%",
+              zIndex: "10",
             }}
           >
             <StyledSection style={{ height: "100%" }}>

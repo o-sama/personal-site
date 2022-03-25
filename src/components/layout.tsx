@@ -42,7 +42,6 @@ export const Layout = ({
             minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
-            background: `${theme.mainBackground}`,
           }}
         >
           <Helmet
