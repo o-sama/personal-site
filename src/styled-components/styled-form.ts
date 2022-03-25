@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 const Input = styled.input`
-  /* width: 40vw;
-  position: relative;
-  margin-left: 35%; */
   background: ${(props) => props.theme.mainBackground};
   color: ${(props) => props.theme.mainText};
   width: 100%;
@@ -13,17 +10,12 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
-  /* width: 80%;
-  position: relative;*/
   padding: 3%;
   text-align: left;
   margin-right: 5%;
 `;
 
 const TextArea = styled.textarea`
-  /* width: 40vw;
-  position: relative;
-  margin-left: 35%; */
   background: ${(props) => props.theme.mainBackground};
   color: ${(props) => props.theme.mainText};
   width: 100%;

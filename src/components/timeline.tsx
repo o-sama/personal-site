@@ -39,7 +39,6 @@ const TimelineColumn = styled(Column)`
 const Timeline: FC<Props> = ({ headers }) => {
   const [shouldBeSmall, setShouldBeSmall] = useState(true);
   const [scrollLevel, setScrollLevel] = useState(0);
-  const [loaded, setLoaded] = useState(false);
   const theme = useContext(ThemeContext);
 
   const vw = Math.max(

@@ -1,11 +1,8 @@
 import React, { FC, useContext } from "react";
-import { Link } from "gatsby";
 import { socials } from "../icons";
 
 // styles
-import { Nav } from "../styled-components/styled-nav";
 import { Row, Column } from "../styled-components/styled-grid";
-import { light, dark } from "../styled-components/themes";
 import styled, { ThemeContext } from "styled-components";
 import { StyledSection } from "../styled-components/styled-section";
 
@@ -76,13 +73,24 @@ const Footer: FC<Props> = () => {
   const theme = useContext(ThemeContext);
   return (
     <footer style={{ marginTop: "auto" }}>
-      <StyledSection secondary style={{ padding: "5vh" }}>
-        <Row container center style={{ height: "fit-content" }}>
+      <StyledSection secondary notchTR style={{ padding: "2vh 0" }}>
+        <Row
+          container
+          center
+          style={{ height: "fit-content", padding: "1.5vh 0" }}
+        >
           <>
             {Object.keys(socials).map((e) =>
               theme.name === "light" ? iconColsLight[e] : iconColsDark[e]
             )}
           </>
+        </Row>
+        <Row
+          container
+          center
+          style={{ padding: "1.5vh 0", fontSize: "x-small" }}
+        >
+          Made with Gatsby & styled Components
         </Row>
       </StyledSection>
     </footer>

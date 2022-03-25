@@ -1,18 +1,14 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import * as styles from "../styles/styles";
 import { Layout } from "../components/layout";
 import { me } from "../icons";
 import indexData from "../content/index.json";
 
 // styles
 import styled from "styled-components";
-import { light } from "../styled-components/themes";
-import { StyledLink } from "../styled-components/styled-link";
 import { Column, Row } from "../styled-components/styled-grid";
 import { StyledList, StyledListItem } from "../styled-components/styled-list";
 import { StyledSection } from "../styled-components/styled-section";
-import { H1, H2, H3 } from "../styled-components/styled-headers";
+import { H1, H2 } from "../styled-components/styled-headers";
 
 // data
 const links = [

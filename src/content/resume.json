@@ -41,11 +41,13 @@
       "dateRange": "May 2020 - Present",
       "locaiton": "Toronto, Ontario, Canada",
       "description": [
-        "Architected and led <strong>development</strong> of new Kubernetes Ingress Pattern using Network Load Balancers (NLBs); designed and implemented zero-downtime migration procedure to move from Classic Load Balancers to new NLB solution, ensuring several clusters in pre-production and production environments continued to receive traffic during migration.",
-        "Implemented Kubernetes Secret Store CSI Driver across several clusters and migrated ingress certificates from Kubernetes ExternalSecrets with zero-downtime in pre-production and production environments.",
-        "Designed and wrote several unit tests for infrastructure status and readiness using Go to verify post-deployment status through CICD Pipeline.",
-        "Provided 24/7 on-call support as part of the engineering team support rotation to customers across several production Kubernetes clusters maintaining SLA of 99.99% uptime.",
-        "Refactored several parts of the project’s Terraform repositories to make Kubernetes clusters more robust and the repositories more sustainable."
+        "Architected and led development of new <strong>Kubernetes</strong> Ingress Pattern using Network Load Balancers and created a zero-downtime migration procedure moving from exsisting Classic Load Balancers on large scale clusters in production environments using <strong>Istio</strong> and <strong>Terraform</strong>.",
+        "Implemented <strong>Kubernetes</strong> Secret Store CSI Driver across several clusters and migrated ingress certificates from Kubernetes ExternalSecrets with zero-downtime in production environments.",
+        "Designed and wrote several unit tests for infrastructure status and readiness using <strong>Go</strong> and <strong>TerraTest</strong> to verify post-deployment status through CICD Pipeline.",
+        "Prticipated actively in <i>L1</i> on-call rotation of 1 week shifts of 24/7 support spread over the team of 7 engineers.",
+        "Participated in the definition and implementation of the <strong>SLOs</strong>, <strong>SLAs</strong>, and <strong>SLIs</strong> for the Service Mesh Team.",
+        "Designed, implemented, and updated several <strong>DataDog</strong> dashboards and monitors across multiple environments using <strong>Terraform</strong>.",
+        "Refactored several parts of the project’s <strong>Terraform</strong> repositories to make them more sustainable for creating and maintaining more than 10 highly available large clusters."
       ]
     },
     {
@@ -55,10 +57,10 @@
       "dateRange": "September 2019 - December 2019",
       "locaiton": "Toronto, Ontario, Canada",
       "description": [
-        "Designed and developed CICD Pipeline to enable application developers to easily deploy onto the service mesh platform using AWS CodePipeline and Helm.",
-        "Developed mission-critical components of the platform using Infrastructure as Code tools such as Terraform and AWS CloudFormation.",
-        "Architected several components of production-grade Kubernetes cluster with an Istio service mesh.",
-        "Developed team’s DevOps practices using SDLC principles such as Git branching strategies and automating processes by implementing the GitOps methodology."
+        "Designed CICD Pipeline using <strong>Terraform</strong> to deploy <strong>Kubernetes Service Mesh</strong> on <strong>EKS</strong> from <strong>GitHub</strong> Repository using the <i>GitOps</i> approach.",
+        "Participated in the design of CICD Pipeline spawner using <strong>Terraform</strong> to enable application developers to easily create their own CICD Pipelines to deploy applications onto the service mesh platform using <strong>AWS CodePipeline</strong> and <strong>Helm</strong>.",
+        "Architected several components of large scale <strong>Kubernetes</strong> cluster with an <strong>Istio Service Mesh</strong>.",
+        "Developed team’s best practices using SDLC principles such as <i>Git Branching</i> strategies and automating processes by implementing the <i>GitOps</i> methodology."
       ]
     },
     {
@@ -68,10 +70,10 @@
       "dateRange": "January 2019 - April 2019",
       "locaiton": "Toronto, Ontario, Canada",
       "description": [
-        "Designed core features of different parts of the Snicket platform, a net-new Event Driven MicroServices system that leverages TypeScript-Node.",
-        "Led the design on Snicket’s Database and Product Asset Management MicroService which use AWS RDS and AWS S3 respectively, providing a high business value through automating the management of product images for vendors which includes fetching, cropping, resizing, and storing the images.",
-        "Created multiple improvements and fixes to Snicket’s Docker and CircleCI environments and integrations with AWS to increase environment-propagation efficiency.",
-        "Designed unit tests and integration tests and developed them using jest in order to promote a fail often, fail fast environment and improve the reliability of Snicket."
+        "Designed core features of different parts of the Snicket platform using <strong>TypeScript-Node</strong> using <i>Event Driven MicroServices</i> architecture.",
+        "Led the design and Implementation on Snicket’s Database and Product Asset Management MicroService which use <strong>AWS RDS</strong> and <strong>AWS S3</strong> respectively, providing a high business value through automating the management of product images for vendors which includes several operations on the images using <strong>Sharp</strong>.",
+        "Created multiple improvements and fixes to Snicket’s <strong>Docker</strong> and <strong>CircleCI</strong> environments.",
+        "Designed <i>unit</i> and <i>integration</i> tests and developed them using <strong>Jest</strong> in order to promote a <i>fail often, fail fast</i> environment."
       ]
     },
     {
@@ -81,10 +83,11 @@
       "dateRange": "September 2017 - December 2017",
       "locaiton": "London, Ontario, Canada",
       "description": [
-        "Overhauled design and redeveloped high priority project management portal using the Django framework for Python.",
-        "Designed and integrated portal’s data warehouse using AWS Redshift.",
-        "Automated Swagger API testing using Python.",
-        "Automatically maintained several excel spreadsheets using Python to save hours of manual labor daily."
+        "Overhauled design and redeveloped high priority project management portal for customer facing smart home system using <strong>Django</strong> .",
+        "Designed and integrated portal’s data warehouse using <strong>AWS Redshift</strong>, enabling distribution team to easily update database and providing tracing.",
+        "Created monitoring and distribution dashboards using <strong>Plotly</strong>.",
+        "Automated Swagger API testing using <strong>Python</strong>.",
+        "developed maintenance automation for several excel spreadsheets using <strong>Python</strong> to save hours of manual labor daily."
       ]
     },
     {
@@ -94,9 +97,9 @@
       "dateRange": "May 2016 - September 2016, January 2017 - May 2017",
       "locaiton": "Cambridge, Ontario, Canada",
       "description": [
-        "Led the development and launch of TMMC’s new Android Andon application, with deployment requested in other Toyota Manufacturing plants to improve efficiency.",
+        "Led the development and launch of new Android Andon application using <strong>Xamarin</strong>.",
         "Developed C# app required for 2017 Corolla launch which resulted in $500,000 annual savings.",
-        "Assisted in developing multiple automation projects using C#, ASP.NET MVC, and Jenkins to improve shop floor work, efficiency, and manpower allocation."
+        "Assisted in developing multiple automation projects using <strong>ASP.NET</strong> and <strong>Jenkins</strong> to improve shop floor work, efficiency, and manpower allocation."
       ]
     }
   ],

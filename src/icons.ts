@@ -1,4 +1,3 @@
-import Assembly from "./images/assembly.svg";
 import Aws from "./images/aws.svg";
 import Awsdark from "./images/awsdark.svg";
 import Bash from "./images/bash.svg";
@@ -22,7 +21,6 @@ import Reactjs from "./images/reactjs.svg";
 import Sql from "./images/sql.svg";
 import Terraform from "./images/terraform.svg";
 import Typescript from "./images/typescript.svg";
-import Vhdl from "./images/vhdl.svg";
 import Uwaterloo from "./images/uwaterloo.svg";
 import Uwaterloodark from "./images/uwaterloodark.svg";
 import Tr from "./images/tr.svg";
@@ -49,7 +47,6 @@ interface Icon {
 }
 
 const iconMap: Icon = {
-  Assembly: { lightMode: Assembly, darkMode: Assembly },
   AWS: { lightMode: Aws, darkMode: Awsdark },
   Bash: { lightMode: Bash, darkMode: Bash },
   C: { lightMode: C, darkMode: C },
@@ -70,7 +67,6 @@ const iconMap: Icon = {
   SQL: { lightMode: Sql, darkMode: Sql },
   Terraform: { lightMode: Terraform, darkMode: Terraform },
   TypeScript: { lightMode: Typescript, darkMode: Typescript },
-  VHDL: { lightMode: Vhdl, darkMode: Vhdl },
   Uwaterloo: { lightMode: Uwaterloo, darkMode: Uwaterloodark },
   Tr: { lightMode: Tr, darkMode: Tr },
   Tmmc: { lightMode: Tmmc, darkMode: Tmmc },

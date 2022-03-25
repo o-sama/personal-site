@@ -1,10 +1,9 @@
 import React, { FC, useContext } from "react";
 import resumeFile from "../content/resume.json";
-import { iconMap } from "../icons";
 
 // styles
-import styled, { ThemeContext } from "styled-components";
-import { Row, Column } from "../styled-components/styled-grid";
+import { ThemeContext } from "styled-components";
+import { Row } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
 import { StyledListItem } from "../styled-components/styled-list";
 

@@ -14,7 +14,6 @@ const iconColsLight: { [key: string]: any } = {};
 const iconColsDark: { [key: string]: any } = {};
 resumeFile["Previous Experience"].map((exp) => {
   const ComponentLight = styled(iconMap[exp["logo"]]["lightMode"])`
-    /* margin-left: 20%; */
     height: 5vw;
     width: 5vw;
     align-self: center;
@@ -75,10 +74,7 @@ const ExperienceSection: FC<Props> = () => {
                   <i>{exp["dateRange"]}</i>
                 </Row>
               </Column>
-
-              {/* <Column span={6}></Column> */}
             </Row>
-
             <Row>
               <ul>
                 {exp["description"].map((e, i) => (

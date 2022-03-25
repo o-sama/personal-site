@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { StyledLink } from "../styled-components/styled-link";
 
 // styles

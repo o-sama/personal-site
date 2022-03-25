@@ -2,10 +2,9 @@ import React, { FC, useContext } from "react";
 import resumeFile from "../content/resume.json";
 
 // styles
-import styled, { ThemeContext } from "styled-components";
+import { ThemeContext } from "styled-components";
 import { Row, Column } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
-import Delayed from "./delayed";
 
 interface Props {}
 

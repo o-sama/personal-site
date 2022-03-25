@@ -23,7 +23,7 @@ const ResumePage = () => {
           <title>Resume</title>
           <H1>Resume</H1>
           {/* LANGUAGES */}
-          <StyledSection>
+          <StyledSection notchBL>
             <Row container center>
               <HiddenAnchor id="LanguagesandTools" title="H2" />
               <H2>Languages & Tools </H2>
@@ -33,7 +33,7 @@ const ResumePage = () => {
             </Row>
           </StyledSection>
           {/* CERTIFICATIONS */}
-          <StyledSection secondary notchTL notchBR>
+          <StyledSection secondary notchTR notchBL>
             <Row container center>
               <HiddenAnchor id="Certifications" title="H2" />
               <H2>Certifications</H2>
@@ -42,15 +42,8 @@ const ResumePage = () => {
               <CertSection />
             </Row>
           </StyledSection>
-          {/* SKILLS */}
-          {/* <StyledSection main={false}>
-              <Row>
-                <H2>Skills</H2>
-              </Row>
-              {skillSection}
-            </StyledSection> */}
           {/* EXPERIENCE */}
-          <StyledSection notchBL>
+          <StyledSection notchBL notchTR>
             <Row container center>
               <HiddenAnchor id="PreviousExperience" title="H2" />
               <H2>Previous Experience</H2>
