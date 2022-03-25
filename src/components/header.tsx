@@ -7,7 +7,7 @@ import { ThemeUpdateContext } from "../../themeProvider";
 import { Nav } from "../styled-components/styled-nav";
 import { Row, Column } from "../styled-components/styled-grid";
 import { light, dark } from "../styled-components/themes";
-import styled, { ThemeContext } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import {
   ThemeButton,
   ThemeIconContainer,
@@ -68,7 +68,7 @@ const IconDark = styled(siteIcons["site"]["darkMode"])`
 `;
 
 const Header: FC<Props> = ({ siteTitle, menuLinks }) => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
   const updateTheme = useContext(ThemeUpdateContext);
 
   return (

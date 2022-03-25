@@ -1,6 +1,6 @@
-import React, { FC, useState, useContext } from "react";
+import React, { FC, useState } from "react";
 import scrollTo from "gatsby-plugin-smoothscroll";
-import { ThemeContext } from "styled-components";
+import { useTheme } from "styled-components";
 
 // styles
 import { Row, Column } from "../styled-components/styled-grid";
@@ -10,6 +10,7 @@ import {
   TimelineNode,
   TimelineText,
 } from "../styled-components/styled-timeline";
+import { light } from "../styled-components/themes";
 
 interface Props {
   headers: string[];
@@ -39,7 +40,7 @@ const TimelineColumn = styled(Column)`
 const Timeline: FC<Props> = ({ headers }) => {
   const [shouldBeSmall, setShouldBeSmall] = useState(true);
   const [scrollLevel, setScrollLevel] = useState(0);
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
 
   const vw = Math.max(
     document.documentElement.clientWidth || 0,

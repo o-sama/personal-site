@@ -3,8 +3,9 @@ import { socials } from "../icons";
 
 // styles
 import { Row, Column } from "../styled-components/styled-grid";
-import styled, { ThemeContext } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { StyledSection } from "../styled-components/styled-section";
+import { light } from "../styled-components/themes";
 
 interface Props {}
 
@@ -70,7 +71,7 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
 });
 
 const Footer: FC<Props> = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
   return (
     <footer style={{ marginTop: "auto" }}>
       <StyledSection secondary notchTR style={{ padding: "2vh 0" }}>

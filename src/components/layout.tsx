@@ -3,10 +3,10 @@ import { graphql, StaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import Header from "./header";
 import Timeline from "./timeline";
-import { ThemeContext } from "styled-components";
-import { useContext } from "react";
+import { useTheme } from "styled-components";
 import Footer from "./footer";
 import Delayed from "./delayed";
+import { light } from "../styled-components/themes";
 
 export const Layout = ({
   children,
@@ -15,7 +15,7 @@ export const Layout = ({
   children: any;
   headers?: string[];
 }) => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
   const Tl = headers ? (
     <Delayed>
       <Timeline headers={headers} />
@@ -42,6 +42,7 @@ export const Layout = ({
             minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
+            background: `${theme.mainBackground}`,
           }}
         >
           <Helmet
@@ -60,6 +61,7 @@ export const Layout = ({
           <div
             style={{
               paddingTop: "5vh",
+              background: `${theme.mainBackground}`,
             }}
           >
             {children}

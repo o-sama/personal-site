@@ -3,9 +3,10 @@ import resumeFile from "../content/resume.json";
 import { iconMap } from "../icons";
 
 // styles
-import styled, { ThemeContext } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { Row, Column } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
+import { light } from "../styled-components/themes";
 
 interface Props {}
 
@@ -41,7 +42,7 @@ Object.entries(resumeFile["Languages and Tools"]).map((entry) => {
 });
 
 const LftSection: FC<Props> = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
   const rows = Object.entries(resumeFile["Languages and Tools"]).map(
     (entry) => {
       return (

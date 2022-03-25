@@ -3,10 +3,11 @@ import resumeFile from "../content/resume.json";
 import { iconMap } from "../icons";
 
 // styles
-import styled, { ThemeContext } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { Row, Column } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
 import { StyledListItem } from "../styled-components/styled-list";
+import { light } from "../styled-components/themes";
 
 interface Props {}
 
@@ -37,7 +38,7 @@ resumeFile["Previous Experience"].map((exp) => {
 });
 
 const ExperienceSection: FC<Props> = () => {
-  const theme = useContext(ThemeContext);
+  const theme = useTheme() as typeof light;
   return (
     <>
       {resumeFile["Previous Experience"].map((exp) => {

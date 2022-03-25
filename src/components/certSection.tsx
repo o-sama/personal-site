@@ -1,8 +1,7 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import resumeFile from "../content/resume.json";
 
 // styles
-import { ThemeContext } from "styled-components";
 import { Row, Column } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
 
@@ -44,7 +43,6 @@ const CertEmbed = ({
 };
 
 const CertSection: FC<Props> = () => {
-  const theme = useContext(ThemeContext);
   return (
     <div>
       {resumeFile["Certifications"].map((cert) => {

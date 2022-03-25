@@ -1,8 +1,7 @@
 import * as React from "react";
 import { light } from "./src/styled-components/themes";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { createContext, useState } from "react";
-import { Helmet } from "react-helmet";
 
 export const ThemeUpdateContext = createContext((theme: typeof light) =>
   console.error(
