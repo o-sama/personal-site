@@ -60,7 +60,6 @@ export const Layout = ({
           <div
             style={{
               paddingTop: "5vh",
-              background: `${theme.mainBackground}`,
             }}
           >
             {children}
