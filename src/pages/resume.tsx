@@ -23,7 +23,7 @@ const ResumePage = () => {
           <title>Resume</title>
           <H1>Resume</H1>
           {/* LANGUAGES */}
-          <StyledSection notchBR>
+          <StyledSection>
             <Row container center>
               <HiddenAnchor id="LanguagesandTools" title="H2" />
               <H2>Languages & Tools </H2>
@@ -50,7 +50,7 @@ const ResumePage = () => {
               {skillSection}
             </StyledSection> */}
           {/* EXPERIENCE */}
-          <StyledSection notchTL notchBL>
+          <StyledSection notchBL>
             <Row container center>
               <HiddenAnchor id="PreviousExperience" title="H2" />
               <H2>Previous Experience</H2>

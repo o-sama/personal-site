@@ -16,7 +16,7 @@ const light = {
   mail: "#ff4500",
   mainFont: "roboto mono",
   specialFont: "raleway",
-  foregroundElements: "#ededed",
+  foregroundElements: "#cacaca",
   shadows: "#555555",
   liftedElements: "#ffffff",
 };

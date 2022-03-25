@@ -23,12 +23,12 @@ export const StyledSection = styled.section<{
     `
       &::before {content: "";
             position: absolute;
-            top: -20vw;
+            top: -30vw;
             left: 0;
-            height: 20vw;
-            width: 20vw;
+            height: 30vw;
+            width: 30vw;
             border-bottom-left-radius: 50%;
-            box-shadow: 0 10vw 0 0
+            box-shadow: 0 15vw 0 0
               ${secondary ? theme.secondaryBackground : theme.mainBackground};
             z-index: 10;
             }
@@ -39,12 +39,12 @@ export const StyledSection = styled.section<{
     `
       &::before {content: "";
             position: absolute;
-            top: -20vw;
+            top: -30vw;
             right: 0;
-            height: 20vw;
-            width: 20vw;
+            height: 30vw;
+            width: 30vw;
             border-bottom-right-radius: 50%;
-            box-shadow: 0 10vw 0 0
+            box-shadow: 0 15vw 0 0
               ${secondary ? theme.secondaryBackground : theme.mainBackground};
             z-index: 10;
             }
@@ -56,12 +56,12 @@ export const StyledSection = styled.section<{
     `
       &::after {content: "";
             position: absolute;
-            bottom: -20vw;
+            bottom: -30vw;
             left: 0;
-            height: 20vw;
-            width: 20vw;
+            height: 30vw;
+            width: 30vw;
             border-top-left-radius: 50%;
-            box-shadow: 0 -10vw 0 0
+            box-shadow: 0 -15vw 0 0
               ${secondary ? theme.secondaryBackground : theme.mainBackground};
             z-index: 10;
             }
@@ -72,12 +72,12 @@ export const StyledSection = styled.section<{
     `
       &::after {content: "";
             position: absolute;
-            bottom: -20vw;
+            bottom: -30vw;
             right: 0;
-            height: 20vw;
-            width: 20vw;
+            height: 30vw;
+            width: 30vw;
             border-top-right-radius: 50%;
-            box-shadow: 0 -10vw 0 0
+            box-shadow: 0 -15vw 0 0
               ${secondary ? theme.secondaryBackground : theme.mainBackground};
             z-index: 10;
             }

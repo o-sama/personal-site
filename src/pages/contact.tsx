@@ -14,9 +14,20 @@ const ClearButton = styled(Input)`
   height: 4vw;
   align-self: center;
   border-radius: 2vw;
+  border-style: outset;
   border-color: ${(props) => props.theme.secondaryText};
   background: ${(props) => props.theme.mainBackground};
   color: ${(props) => props.theme.secondaryText};
+
+  :hover {
+    background: ${(props) => props.theme.secondaryBackground};
+    color: ${(props) => props.theme.mainText};
+    transition: all ease-in-out 0.35s;
+  }
+`;
+
+const FormRow = styled(Row)`
+  padding: 0.75vw 0;
 `;
 
 const ContactPage = () => {
@@ -24,52 +35,57 @@ const ContactPage = () => {
     <Layout>
       <main style={{ height: "50vh", paddingTop: "15vh" }}>
         <title>Contact</title>
-        <H1>Contact</H1>
+        <H1 style={{ marginTop: "-5%", marginBottom: "5%", fontSize: "4vw" }}>
+          Get in Touch!
+        </H1>
         <StyledSection>
           <Row container center>
             <Form method="post" action="https://formspree.io/f/mnqwzkle">
               <Row center>
-                {" "}
-                <Column span={5}>
-                  <Label htmlFor="name">Name</Label>
+                <Column span={4}>
+                  <FormRow>
+                    <Label htmlFor="name">Name</Label>
+                  </FormRow>
+                  <FormRow>
+                    <Label htmlFor="email">Email</Label>
+                  </FormRow>
+                  <FormRow>
+                    <Label htmlFor="subject">Subject</Label>
+                  </FormRow>
+                  <FormRow>
+                    <Label htmlFor="message">Message</Label>
+                  </FormRow>
+                  {/* <FormRow>
+                    <Label />
+                  </FormRow> */}
+                  {/* min-height: 2.5vw; */}
                 </Column>
-                <Column span={7}>
-                  <Input type="text" name="name" id="name" required />
-                </Column>
-              </Row>
-              <Row center>
-                <Column span={5}>
-                  <Label htmlFor="email">Email</Label>
-                </Column>
-
-                <Column span={7}>
-                  <Input type="email" name="email" id="email" required />
-                </Column>
-              </Row>
-              <Row center>
-                <Column span={5}>
-                  <Label htmlFor="subject">Subject</Label>
-                </Column>
-
-                <Column span={7}>
-                  <Input type="text" name="subject" id="subject" required />
-                </Column>
-              </Row>
-              <Row center>
-                <Column span={5}>
-                  <Label htmlFor="message">Message</Label>
-                </Column>
-                <input type="text" name="_gotcha" style={{ display: "none" }} />
-                <Column span={7}>
-                  <TextArea name="message" id="message" rows={5} required />
-                </Column>
-              </Row>
-              <Row center style={{ paddingTop: "3vh" }}>
-                <Column span={6}>
-                  <Button type="submit">Send</Button>
-                </Column>
-                <Column span={6}>
-                  <ClearButton type="reset" value="Clear" />
+                <Column span={8}>
+                  <FormRow>
+                    <Input type="text" name="name" id="name" required />
+                  </FormRow>
+                  <FormRow>
+                    <Input type="email" name="email" id="email" required />
+                  </FormRow>
+                  <FormRow>
+                    <Input type="text" name="subject" id="subject" required />
+                  </FormRow>
+                  <FormRow>
+                    <input
+                      type="text"
+                      name="_gotcha"
+                      style={{ display: "none" }}
+                    />
+                    <TextArea name="message" id="message" rows={5} required />
+                  </FormRow>
+                  <FormRow>
+                    <Button type="submit">Send</Button>
+                    <ClearButton
+                      type="reset"
+                      value="Clear"
+                      style={{ marginLeft: "auto" }}
+                    />
+                  </FormRow>
                 </Column>
               </Row>
             </Form>

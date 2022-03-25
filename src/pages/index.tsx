@@ -102,10 +102,10 @@ const IndexPage = () => {
                 <Image src={me} />
               </Row>
               <Row container center>
-                <H2>My Interests</H2>
+                <H2>What I like</H2>
                 <StyledList style={{ marginLeft: "-7.5%" }}>
-                  {indexData["Interests"].map((e) => (
-                    <StyledListItem>{e}</StyledListItem>
+                  {indexData["Interests"].map((e, i) => (
+                    <StyledListItem key={i}>{e}</StyledListItem>
                   ))}
                 </StyledList>
               </Row>
