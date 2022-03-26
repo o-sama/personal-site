@@ -53,6 +53,12 @@ export const Layout = ({
             }}
           />
           <SEO />
+          <Helmet>
+            <meta
+              name="google-site-verification"
+              content="Fp_UoougSu4XBQxBALBcdVoXDZ02MyZXuVLiyjLs7x0"
+            />
+          </Helmet>
           <Header
             menuLinks={data.site.siteMetadata.menuLinks}
             siteTitle={data.site.siteMetadata.title}
