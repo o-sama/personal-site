@@ -96,7 +96,7 @@ const IndexPage = () => {
                   marginTop: "10%",
                 }}
               >
-                <Image src={me} />
+                <Image src={me} alt="Me!" />
               </Row>
               <Row container center>
                 <H2>What I like</H2>

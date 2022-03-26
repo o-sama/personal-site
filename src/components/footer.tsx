@@ -40,11 +40,17 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
           href={link}
           download="Osama Faqhruldin Resume.pdf"
           style={{ alignSelf: "center" }}
+          aria-label={e[0]}
         >
           <ComponentLight />
         </a>
       ) : (
-        <a href={link} target="_blank" style={{ alignSelf: "center" }}>
+        <a
+          href={link}
+          target="_blank"
+          style={{ alignSelf: "center" }}
+          aria-label={e[0]}
+        >
           <ComponentLight />
         </a>
       )}
@@ -58,11 +64,17 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
           href={link}
           download="Osama Faqhruldin Resume.pdf"
           style={{ alignSelf: "center" }}
+          aria-label={e[0]}
         >
           <ComponentDark />
         </a>
       ) : (
-        <a href={link} target="_blank" style={{ alignSelf: "center" }}>
+        <a
+          href={link}
+          target="_blank"
+          style={{ alignSelf: "center" }}
+          aria-label={e[0]}
+        >
           <ComponentDark />
         </a>
       )}

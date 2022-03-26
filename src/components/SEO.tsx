@@ -62,19 +62,35 @@ const SEO: React.FC<Props> = ({
     author: {
       "@type": "Person",
       name: author,
+      sameAs: [
+        "https://www.linkedin.com/in/osamafaqhruldin/",
+        "https://github.com/o-sama",
+      ],
     },
     copyrightHolder: {
       "@type": "Person",
       name: author,
+      sameAs: [
+        "https://www.linkedin.com/in/osamafaqhruldin/",
+        "https://github.com/o-sama",
+      ],
     },
     copyrightYear: "2019",
     creator: {
       "@type": "Person",
       name: author,
+      sameAs: [
+        "https://www.linkedin.com/in/osamafaqhruldin/",
+        "https://github.com/o-sama",
+      ],
     },
     publisher: {
       "@type": "Person",
       name: author,
+      sameAs: [
+        "https://www.linkedin.com/in/osamafaqhruldin/",
+        "https://github.com/o-sama",
+      ],
     },
     datePublished: "2022-03-25T10:30:00+04:00",
     dateModified: buildTime,
@@ -111,7 +127,7 @@ const SEO: React.FC<Props> = ({
         "@type": "Person",
         name: author,
       },
-      copyrightYear: "2019",
+      copyrightYear: "2022",
       creator: {
         "@type": "Person",
         name: author,

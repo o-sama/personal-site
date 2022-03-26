@@ -16,7 +16,7 @@ const CardContainer = styled(Column)`
 
 const projects = projectsFile["projectList"].map((p) => {
   return (
-    <a href={p["link"]} target="_blank">
+    <a href={p["link"]} target="_blank" aria-label={p["name"]}>
       <CardContainer span={6}>
         <Card>
           <Row center>{p["name"]}</Row>

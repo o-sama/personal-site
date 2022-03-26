@@ -91,7 +91,9 @@ const Header: FC<Props> = ({ menuLinks }) => {
                   key={link.name}
                   style={{ width: "fit-content", padding: "1vh 10%" }}
                 >
-                  <NavLink to={link.link}>{link.name}</NavLink>
+                  <NavLink to={link.link} aria-label={link.name}>
+                    {link.name}
+                  </NavLink>
                 </Column>
               ))}
             </Row>
@@ -99,6 +101,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
 
           <Column style={{ marginLeft: "auto", textAlign: "center" }}>
             <ThemeButton
+              name="theme button"
               onClick={() => updateTheme(theme === light ? dark : light)}
             >
               <ThemeIconContainer switch={theme === light ? false : true}>

@@ -94,11 +94,14 @@ const ContactPage = () => {
                   </Column>
                   <Column span={7}>
                     <FormRow>
-                      <Button type="submit">Send</Button>
+                      <Button type="submit" name="submit">
+                        Send
+                      </Button>
                       <ClearButton
                         type="reset"
                         value="Clear"
                         style={{ marginLeft: "auto" }}
+                        name="clear"
                       />
                     </FormRow>
                   </Column>
