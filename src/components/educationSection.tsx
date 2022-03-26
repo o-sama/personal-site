@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import resumeFile from "../content/resume.json";
-import { iconMap } from "../icons";
+import { iconMap } from "../assets";
 
 // styles
 import { useTheme } from "styled-components";

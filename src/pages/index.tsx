@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Layout } from "../components/layout";
-import { me } from "../icons";
+import { me } from "../assets";
 import indexData from "../content/index.json";
 
 // styles

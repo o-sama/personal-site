@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { siteIcons } from "../icons";
+import { siteIcons } from "../assets";
 
 const animateDimmer = keyframes`
 from {

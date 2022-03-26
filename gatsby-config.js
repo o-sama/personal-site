@@ -1,8 +1,19 @@
 /** @type {import('gatsby').GatsbyConfig} */
+
+website = require("./website.ts");
+const pathPrefix = website.pathPrefix === "/" ? "" : website.pathPrefix;
+
 module.exports = {
   siteMetadata: {
-    title: `Osama`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: website.title,
+    siteUrl: website.url + pathPrefix,
+    pathPrefix,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: "/" + website.logo,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    author: website.author,
     menuLinks: [
       {
         name: "Home",
@@ -33,7 +44,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        name: website.title,
+        short_name: website.titleAlt,
+        description: website.description,
+        // start_url: pathPrefix,
+        display: "standalone",
+        icon: website.favicon,
       },
     },
     "gatsby-plugin-sharp",

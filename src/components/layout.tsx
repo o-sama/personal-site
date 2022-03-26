@@ -7,6 +7,7 @@ import { useTheme } from "styled-components";
 import Footer from "./footer";
 import Delayed from "./delayed";
 import { light } from "../styled-components/themes";
+import SEO from "./SEO";
 
 export const Layout = ({
   children,
@@ -45,13 +46,13 @@ export const Layout = ({
             background: `${theme.mainBackground}`,
           }}
         >
+          <Helmet title={data.site.siteMetadata.title} />
           <Helmet
-            title={"title"}
-            meta={[
-              { name: "description", content: "Sample" },
-              { name: "keywords", content: "sample, something" },
-            ]}
-          ></Helmet>
+            htmlAttributes={{
+              lang: "en",
+            }}
+          />
+          <SEO />
           <Header
             menuLinks={data.site.siteMetadata.menuLinks}
             siteTitle={data.site.siteMetadata.title}

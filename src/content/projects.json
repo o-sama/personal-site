@@ -1,9 +1,10 @@
 {
   "projectList": [
     {
-      "name": "",
-      "image": "",
-      "description": ""
+      "name": "This Website!",
+      "image": "website",
+      "description": "Gatsby & Styled Components personal website made from scratch.",
+      "link": "https://github.com/o-sama/personal-site"
     }
   ]
 }

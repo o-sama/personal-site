@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  width: 20vw;
-  height: 17.5vw;
+  width: 30vw;
+  height: 30vw;
   border-radius: 0.5vw;
   box-shadow: 0.1vw 0.0725vw 0.1vw ${(props) => props.theme.shadows},
     -0.025vw -0.025vw 0.05vw ${(props) => props.theme.shadows};

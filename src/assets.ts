@@ -41,9 +41,14 @@ import contactDark from "./images/contactdark.svg";
 import download from "./images/download.svg";
 import downloadDark from "./images/downloaddark.svg";
 import downloadFile from "./content/resume.pdf";
+import website from "./images/website.png";
 
 interface Icon {
   [key: string]: { [key: string]: any };
+}
+
+interface Image {
+  [key: string]: any;
 }
 
 const iconMap: Icon = {
@@ -106,4 +111,6 @@ const siteIcons: Icon = { site: { lightMode: light, darkMode: dark } };
 
 const themeIcons: Icon = { theme: { lightMode: sun, darkMode: moon } };
 
-export { iconMap, siteIcons, themeIcons, me, socials };
+const projectImages: Image = { website: website };
+
+export { iconMap, siteIcons, themeIcons, me, socials, projectImages };

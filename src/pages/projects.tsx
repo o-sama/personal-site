@@ -1,6 +1,8 @@
 import React from "react";
 import { Layout } from "../components/layout";
 import styled from "styled-components";
+import projectsFile from "../content/projects.json";
+import { projectImages } from "../assets";
 
 // styles
 import { StyledSection } from "../styled-components/styled-section";
@@ -12,6 +14,28 @@ const CardContainer = styled(Column)`
   margin: 1.5vh 0;
 `;
 
+const projects = projectsFile["projectList"].map((p) => {
+  return (
+    <a href={p["link"]} target="_blank">
+      <CardContainer span={6}>
+        <Card>
+          <Row center>{p["name"]}</Row>
+          <Row center>
+            <img
+              src={projectImages[p["image"]]}
+              alt={p["name"]}
+              style={{ width: "75%" }}
+            ></img>
+          </Row>
+          <Row center style={{ textAlign: "center" }}>
+            {p["description"]}
+          </Row>
+        </Card>
+      </CardContainer>
+    </a>
+  );
+});
+
 const ProjectsPage = () => {
   return (
     <Layout>
@@ -20,36 +44,8 @@ const ProjectsPage = () => {
         <H1>Projects</H1>
         <StyledSection>
           <Row container center>
-            <CardContainer span={4}>
-              <Card>
-                <Row center>sfsdfs</Row>
-                <Row center>sfsdf</Row>
-                <Row center>sdfds</Row>
-              </Card>
-            </CardContainer>
-            <CardContainer span={4}>
-              <Card>
-                <Row center>sfsdfs</Row>
-                <Row center>sfsdf</Row>
-                <Row center>sdfds</Row>
-              </Card>
-            </CardContainer>
-            <CardContainer span={4}>
-              <Card>
-                <Row center>sfsdfs</Row>
-                <Row center>sfsdf</Row>
-                <Row center>sdfds</Row>
-              </Card>
-            </CardContainer>
-            <CardContainer span={4}>
-              <Card>
-                <Row center>sfsdfs</Row>
-                <Row center>sfsdf</Row>
-                <Row center>sdfds</Row>
-              </Card>
-            </CardContainer>
-
-            <CardContainer span={4}>
+            {projects.map((p) => p)}
+            <CardContainer span={6}>
               <Card>
                 <Row center>Coming Soon...</Row>
               </Card>

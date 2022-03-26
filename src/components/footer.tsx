@@ -1,5 +1,5 @@
 import React, { FC, useContext } from "react";
-import { socials } from "../icons";
+import { socials } from "../assets";
 
 // styles
 import { Row, Column } from "../styled-components/styled-grid";

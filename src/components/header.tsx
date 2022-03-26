@@ -1,6 +1,6 @@
 import React, { FC, useContext, useEffect, useRef, useState } from "react";
 import { Link } from "gatsby";
-import { siteIcons, themeIcons } from "../icons";
+import { siteIcons, themeIcons } from "../assets";
 import { ThemeUpdateContext } from "../../themeProvider";
 
 // styles
@@ -67,7 +67,7 @@ const IconDark = styled(siteIcons["site"]["darkMode"])`
   align-self: right;
 `;
 
-const Header: FC<Props> = ({ siteTitle, menuLinks }) => {
+const Header: FC<Props> = ({ menuLinks }) => {
   const theme = useTheme() as typeof light;
   const updateTheme = useContext(ThemeUpdateContext);
 
@@ -114,8 +114,5 @@ const Header: FC<Props> = ({ siteTitle, menuLinks }) => {
       </Nav>
     </header>
   );
-};
-Header.defaultProps = {
-  siteTitle: ``,
 };
 export default Header;
