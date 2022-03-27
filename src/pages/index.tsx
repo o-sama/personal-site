@@ -61,7 +61,8 @@ const Image = styled.img`
   height: 15vw;
   width: 15vw;
 
-  border: 5px solid ${(props) => props.theme.foregroundElements};
+  border: 5px solid
+    ${(props) => props.theme["background"]["foregroundElements"]};
   border-radius: 50%;
 `;
 

@@ -15,13 +15,13 @@ const ClearButton = styled(Input)`
   align-self: center;
   border-radius: 2vw;
   border-style: outset;
-  border-color: ${(props) => props.theme.secondaryText};
-  background: ${(props) => props.theme.mainBackground};
-  color: ${(props) => props.theme.secondaryText};
+  border-color: ${(props) => props.theme["button"]["borderColor"]};
+  background: ${(props) => props.theme["button"]["backgroundColor"]["regular"]};
+  color: ${(props) => props.theme["text"]["primary"]};
 
   :hover {
-    background: ${(props) => props.theme.secondaryBackground};
-    color: ${(props) => props.theme.mainText};
+    background: ${(props) => props.theme["button"]["backgroundColor"]["hover"]};
+    color: ${(props) => props.theme["text"]["primary"]};
     transition: all ease-in-out 0.35s;
   }
 `;

@@ -22,6 +22,7 @@ const ResumePage = () => {
         <main id="main">
           <title>Resume</title>
           <H1>Resume</H1>
+
           {/* LANGUAGES */}
           <StyledSection notchBL>
             <Row container center>
@@ -32,6 +33,7 @@ const ResumePage = () => {
               <LftSection />
             </Row>
           </StyledSection>
+
           {/* CERTIFICATIONS */}
           <StyledSection secondary notchTR notchBL>
             <Row container center>
@@ -42,6 +44,7 @@ const ResumePage = () => {
               <CertSection />
             </Row>
           </StyledSection>
+
           {/* EXPERIENCE */}
           <StyledSection notchBL notchTR>
             <Row container center>
@@ -52,6 +55,7 @@ const ResumePage = () => {
               <ExperienceSection />
             </Row>
           </StyledSection>
+
           {/* PROJECTS */}
           <StyledSection secondary notchTR notchBL>
             <Row container center>
@@ -62,6 +66,7 @@ const ResumePage = () => {
               <ProjectSection />
             </Row>
           </StyledSection>
+
           {/* EDUCATION */}
           <StyledSection notchTR>
             <Row container center>

@@ -6,7 +6,6 @@ import Timeline from "./timeline";
 import { useTheme } from "styled-components";
 import Footer from "./footer";
 import Delayed from "./delayed";
-import { light } from "../styled-components/themes";
 import SEO from "./SEO";
 
 export const Layout = ({
@@ -16,7 +15,7 @@ export const Layout = ({
   children: any;
   headers?: string[];
 }) => {
-  const theme = useTheme() as typeof light;
+  const theme = useTheme();
   const Tl = headers ? (
     <Delayed>
       <Timeline headers={headers} />
@@ -43,7 +42,7 @@ export const Layout = ({
             minHeight: "100vh",
             display: "flex",
             flexDirection: "column",
-            background: `${theme.mainBackground}`,
+            background: `${theme["background"]["primary"]}`,
           }}
         >
           <Helmet title={data.site.siteMetadata.title} />
@@ -68,7 +67,7 @@ export const Layout = ({
           <div
             style={{
               paddingTop: "5vh",
-              background: `${theme.mainBackground}`,
+              background: `${theme["background"]["primary"]}`,
             }}
           >
             {children}

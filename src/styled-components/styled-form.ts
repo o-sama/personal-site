@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const Input = styled.input`
-  background: ${(props) => props.theme.mainBackground};
-  color: ${(props) => props.theme.mainText};
+  background: ${(props) => props.theme["background"]["primary"]};
+  color: ${(props) => props.theme["text"]["primary"]};
   width: 100%;
   border-width: 2px;
   border-style: outset;
-  border-color: ${(props) => props.theme.secondaryText};
+  border-color: ${(props) => props.theme["text"]["secondary"]};
 `;
 
 const Label = styled.label`
@@ -16,13 +16,13 @@ const Label = styled.label`
 `;
 
 const TextArea = styled.textarea`
-  background: ${(props) => props.theme.mainBackground};
-  color: ${(props) => props.theme.mainText};
+  background: ${(props) => props.theme["background"]["primary"]};
+  color: ${(props) => props.theme["text"]["primary"]};
   width: 100%;
   max-height: 25vh;
   border-width: 2px;
   border-style: outset;
-  border-color: ${(props) => props.theme.secondaryText};
+  border-color: ${(props) => props.theme["text"]["secondary"]};
 `;
 
 const Form = styled.form`

@@ -53,7 +53,7 @@ const LftSection: FC<Props> = () => {
             </Row>
             <Row center container>
               {entry[1].map((e) =>
-                theme.name === "light" ? iconColsLight[e] : iconColsDark[e]
+                theme["name"] === "light" ? iconColsLight[e] : iconColsDark[e]
               )}
             </Row>
           </Row>

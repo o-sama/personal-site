@@ -20,7 +20,7 @@ resumeFile["Education"]["specialtyCourses"].map((e) => {
 
 const EducationSection: FC<Props> = () => {
   const theme = useTheme() as typeof light;
-  const Icon = iconMap["Uwaterloo"][theme.name + "Mode"];
+  const Icon = iconMap["Uwaterloo"][theme["name"] + "Mode"];
   return (
     <Row>
       <Row center>

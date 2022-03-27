@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "./themes";
 
 const Row = styled.div<{
   center?: boolean;
@@ -18,7 +19,9 @@ const Row = styled.div<{
   /* Content */
   justify-content: ${(props) => (props.center ? "center" : "safe")};
   color: ${(props) =>
-    props.secondary ? props.theme.secondaryText : props.theme.mainText};
+    props.secondary
+      ? props.theme["text"]["secondary"]
+      : props.theme["text"]["primary"]};
 
   /* After */
   &::after {
@@ -28,11 +31,15 @@ const Row = styled.div<{
   }
 
   @media only screen and (min-width: 768px) {
-    width: ${(props) => (props.container ? "75%" : "100%")};
+    width: ${(props) => (props.container ? "80%" : "100%")};
   }
 `;
 
-const Column = styled.div<{ span?: number; secondary?: boolean }>`
+const Column = styled.div<{
+  span?: number;
+  secondary?: boolean;
+  tertiaryText?: boolean;
+}>`
   /* Properties */
   float: left;
   width: ${(props) => (props.span ? (props.span / 12) * 100 : "100")}%;
@@ -46,9 +53,23 @@ const Column = styled.div<{ span?: number; secondary?: boolean }>`
   /* Content */
   justify-content: center;
   color: ${(props) =>
-    props.secondary ? props.theme.secondaryText : props.theme.mainText};
+    props.secondary
+      ? props.theme["text"]["secondary"]
+      : props.theme["text"]["primary"]};
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: ${(props) => (props.span ? (props.span / 12) * 100 : "33.32")}%;
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: ${(props) => (props.span ? (props.span / 12) * 100 : "24.99")}%;
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    width: ${(props) => (props.span ? (props.span / 12) * 100 : "16.66")}%;
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
     width: ${(props) => (props.span ? (props.span / 12) * 100 : "8.33")}%;
   }
 `;

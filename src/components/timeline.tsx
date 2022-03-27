@@ -10,7 +10,6 @@ import {
   TimelineNode,
   TimelineText,
 } from "../styled-components/styled-timeline";
-import { light } from "../styled-components/themes";
 
 interface Props {
   headers: string[];
@@ -38,9 +37,18 @@ const TimelineColumn = styled(Column)`
 `;
 
 const Timeline: FC<Props> = ({ headers }) => {
+  const docBody: HTMLElement = document.body.parentNode as any;
+  const docHeight: number = docBody!.scrollHeight - docBody!.clientHeight;
+
+  const getHeightPercentage: any = (element: any, ref: any) => {
+    return ((element.scrollTop || docBody!.scrollTop) / docHeight) * 100;
+  };
+
   const [shouldBeSmall, setShouldBeSmall] = useState(true);
-  const [scrollLevel, setScrollLevel] = useState(0);
-  const theme = useTheme() as typeof light;
+  const [scrollLevel, setScrollLevel] = useState(
+    getHeightPercentage(document.body)
+  );
+  const theme = useTheme();
 
   const vw = Math.max(
     document.documentElement.clientWidth || 0,
@@ -53,18 +61,11 @@ const Timeline: FC<Props> = ({ headers }) => {
   const vwTovh = vw / vh;
   const nodeHeight = 1.75 * vwTovh;
 
-  const docBody: HTMLElement = document.body.parentNode as any;
-  const docHeight: number = docBody!.scrollHeight - docBody!.clientHeight;
-
-  const getHeightPercentage: any = (element: any, ref: any) => {
-    return ((element.scrollTop || docBody!.scrollTop) / docHeight) * 100;
-  };
-
   const handleScroll = () => {
     setScrollLevel(getHeightPercentage(document.body));
   };
   window.addEventListener("scroll", handleScroll);
-  let scrollGradient: string = `${theme.headers} 0%, ${theme.headers} ${scrollLevel}%, ${theme.foregroundElements} ${scrollLevel}%, ${theme.foregroundElements} 100%`;
+  let scrollGradient: string = `${theme["text"]["headers"]} 0%, ${theme["text"]["headers"]} ${scrollLevel}%, ${theme["background"]["foregroundElements"]} ${scrollLevel}%, ${theme["background"]["foregroundElements"]} 100%`;
 
   const nodeBackgrounds: string[] = [];
 
@@ -87,17 +88,19 @@ const Timeline: FC<Props> = ({ headers }) => {
 
     if (scrollLevel < margin) {
       nodeBackgrounds.push(
-        `${theme.foregroundElements} 0%, ${theme.foregroundElements} 100%`
+        `${theme["background"]["foregroundElements"]} 0%, ${theme["background"]["foregroundElements"]} 100%`
       );
     } else if (scrollLevel > margin + nodeHeight) {
-      nodeBackgrounds.push(`${theme.headers} 0%, ${theme.headers} 100%`);
+      nodeBackgrounds.push(
+        `${theme["text"]["headers"]} 0%, ${theme["text"]["headers"]} 100%`
+      );
     } else {
       nodeBackgrounds.push(
-        `${theme.headers} 0%, ${theme.headers} ${
+        `${theme["text"]["headers"]} 0%, ${theme["text"]["headers"]} ${
           ((scrollLevel - margin) / nodeHeight) * 100
-        }%, ${theme.foregroundElements} ${
+        }%, ${theme["background"]["foregroundElements"]} ${
           ((scrollLevel - margin) / nodeHeight) * 100
-        }%, ${theme.foregroundElements} 100%`
+        }%, ${theme["background"]["foregroundElements"]} 100%`
       );
     }
 

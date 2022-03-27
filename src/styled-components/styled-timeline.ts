@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Row } from "./styled-grid";
+import { breakpoints } from "./themes";
 
 const TimelineDiv = styled.div<{ gradients: string; shouldBeSmall: boolean }>`
   /* Properties */
@@ -53,8 +54,9 @@ const TimelineText = styled(Row)<{
   word-wrap: break-word;
   height: 2vh;
   vertical-align: bottom;
-  font-family: ${(props) => props.theme.specialFont};
-  color: ${(props) => props.theme.secondaryText};
+  font-family: ${(props) => props.theme["font"]["family"]["secondary"]};
+  font-size: ${(props) => props.theme["font"]["size"]["xs"]["secondary"]};
+  color: ${(props) => props.theme["text"]["secondary"]};
   cursor: pointer;
   position: absolute;
 
@@ -62,6 +64,22 @@ const TimelineText = styled(Row)<{
   opacity: ${(props) => (props.shouldBeHidden ? 0 : 1)};
   visibility: ${(props) => (props.shouldBeHidden ? "hidden" : "visible")};
   transition: ${(props) => `${0.35 + 0.35 * props.current}s`};
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    font-size: ${(props) => props.theme["font"]["size"]["s"]["secondary"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    font-size: ${(props) => props.theme["font"]["size"]["m"]["secondary"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    font-size: ${(props) => props.theme["font"]["size"]["l"]["secondary"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    font-size: ${(props) => props.theme["font"]["size"]["xl"]["secondary"]};
+  }
 `;
 
 export { TimelineDiv, TimelineNode, TimelineText };

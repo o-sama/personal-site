@@ -47,7 +47,7 @@ const ProjectsPage = () => {
             {projects.map((p) => p)}
             <CardContainer span={6}>
               <Card>
-                <Row center>Coming Soon...</Row>
+                <Row center>Coming Soon!</Row>
               </Card>
             </CardContainer>
           </Row>

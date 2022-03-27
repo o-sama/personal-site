@@ -46,7 +46,7 @@ const ExperienceSection: FC<Props> = () => {
           <Row key={exp["position"]}>
             <Row center>
               {/* style={{ width: `${100 / 6}%`, marginLeft: "auto" }} */}
-              {theme.name === "light"
+              {theme["name"] === "light"
                 ? iconColsLight[exp["logo"]]
                 : iconColsDark[exp["logo"]]}
               <Column span={6}>

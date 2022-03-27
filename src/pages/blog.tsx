@@ -10,8 +10,8 @@ const BlogsPage = () => {
   return (
     <Layout>
       <main style={{ height: "50vh", paddingTop: "15vh" }}>
-        <title>Contact</title>
-        <H1>Contact</H1>
+        <title>Blog</title>
+        <H1>Coming soon!</H1>
         <StyledSection>
           <Row container center></Row>
         </StyledSection>
