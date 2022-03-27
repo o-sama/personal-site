@@ -40,14 +40,42 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      createLinkInHead: true,
+      query: `
+        {
+          wp {
+            generalSettings {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+      }`,
+      resolveSiteUrl: ({ site, allSitePage }) => {
+        return site.wp.generalSettings.siteUrl;
+      },
+      serialize: ({ site, allSitePage }) =>
+        allSitePage.nodes.map((node) => {
+          return {
+            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+            changefreq: `daily`,
+            priority: 0.7,
+          };
+        }),
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: website.title,
         short_name: website.titleAlt,
         description: website.description,
-        // start_url: pathPrefix,
+        start_url: "/",
         display: "standalone",
         icon: website.favicon,
       },

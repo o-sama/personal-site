@@ -9,9 +9,13 @@ import { StyledSection } from "../styled-components/styled-section";
 import { H1 } from "../styled-components/styled-headers";
 import { Row, Column } from "../styled-components/styled-grid";
 import { Card } from "../styled-components/styled-card";
+import { SecondaryText } from "../styled-components/styled-span";
 
 const CardContainer = styled(Column)`
-  margin: 1.5vh 0;
+  margin: 1.5vw 1.5vw;
+  /* align-self: center; */
+  height: fit-content;
+  width: fit-content;
 `;
 
 const projects = projectsFile["projectList"].map((p) => {
@@ -28,7 +32,7 @@ const projects = projectsFile["projectList"].map((p) => {
             ></img>
           </Row>
           <Row center style={{ textAlign: "center" }}>
-            {p["description"]}
+            <SecondaryText>{p["description"]}</SecondaryText>
           </Row>
         </Card>
       </CardContainer>
@@ -43,7 +47,7 @@ const ProjectsPage = () => {
         <title>Contact</title>
         <H1>Projects</H1>
         <StyledSection>
-          <Row container center>
+          <Row center>
             {projects.map((p) => p)}
             <CardContainer span={6}>
               <Card>

@@ -8,6 +8,7 @@ import { Nav } from "../styled-components/styled-nav";
 import { Row, Column } from "../styled-components/styled-grid";
 import { light, dark } from "../styled-components/themes";
 import styled, { useTheme } from "styled-components";
+import { breakpoints } from "../styled-components/themes";
 import {
   ThemeButton,
   ThemeIconContainer,
@@ -37,31 +38,112 @@ const ThemeIconLight = styled(themeIcons["theme"]["lightMode"])<{
   switched: boolean;
 }>`
   /* Properties */
-  height: 1.6vw;
-  width: 1.6vw;
+  height: 3vw;
+  width: 3vw;
   align-self: center;
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: 2.4vw;
+    height: 2.4vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    width: 1.4vw;
+    height: 1.4vw;
+  }
 `;
 
 const ThemeIconDark = styled(themeIcons["theme"]["darkMode"])<{
   switched: boolean;
 }>`
   /* Properties */
-  height: 1.6vw;
-  width: 1.6vw;
+  height: 3vw;
+  width: 3vw;
   align-self: center;
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: 2.4vw;
+    height: 2.4vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    width: 1.6vw;
+    height: 1.6vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    width: 1.4vw;
+    height: 1.4vw;
+  }
 `;
 
 const IconLight = styled(siteIcons["site"]["lightMode"])`
-  height: 2.5vw;
-  width: 2.5vw;
-
+  /* Properties */
+  height: 4.7vw;
+  width: 4.7vw;
   align-self: center;
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: 3.75vw;
+    height: 3.75vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    width: 2.2vw;
+    height: 2.2vw;
+  }
 `;
 
 const IconDark = styled(siteIcons["site"]["darkMode"])`
-  height: 2.5vw;
-  width: 2.5vw;
+  /* Properties */
+  height: 4.7vw;
+  width: 4.7vw;
   align-self: center;
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: 3.75vw;
+    height: 3.75vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: 3.125vw;
+    height: 3.125vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    width: 2.2vw;
+    height: 2.2vw;
+  }
 `;
 
 const Header: FC<Props> = ({ menuLinks }) => {
@@ -78,11 +160,11 @@ const Header: FC<Props> = ({ menuLinks }) => {
             width: "100%",
           }}
         >
-          <Column span={2} style={{ marginRight: "auto" }}>
+          <Column span={2}>
             <Link
               to="/"
               aria-label="home"
-              style={{ width: "fit-content", marginLeft: "0.5vw" }}
+              style={{ width: "fit-content", alignSelf: "center" }}
             >
               {theme["name"] === "light" ? <IconLight /> : <IconDark />}
             </Link>

@@ -5,6 +5,7 @@ import { socials } from "../assets";
 import { Row, Column } from "../styled-components/styled-grid";
 import styled, { useTheme } from "styled-components";
 import { StyledSection } from "../styled-components/styled-section";
+import { breakpoints } from "../styled-components/themes";
 import { TertiaryText } from "../styled-components/styled-span";
 
 interface Props {}
@@ -15,8 +16,28 @@ const iconColsDark: { [key: string]: any } = {};
 Object.entries(socials).map((e: { [key: string]: any }) => {
   const link = e[1]["link"];
   const ComponentLight = styled(e[1]["lightMode"])`
-    height: 3vmin;
-    width: 3vmin;
+    height: 5.25vw;
+    width: 5.25vw;
+
+    @media only screen and (min-width: ${breakpoints["s"]}) {
+      width: 4.5vw;
+      height: 4.5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["m"]}) {
+      width: 3.75vw;
+      height: 3.75vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["l"]}) {
+      height: 3vw;
+      width: 3vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["xl"]}) {
+      width: 2.6vw;
+      height: 2.6vw;
+    }
 
     :hover {
       transform: scale(1.5);
@@ -24,8 +45,28 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
     transition: all 0.35s ease-in-out;
   `;
   const ComponentDark = styled(e[1]["darkMode"])`
-    height: 3vmin;
-    width: 3vmin;
+    height: 5.25vw;
+    width: 5.25vw;
+
+    @media only screen and (min-width: ${breakpoints["s"]}) {
+      width: 4.5vw;
+      height: 4.5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["m"]}) {
+      width: 3.75vw;
+      height: 3.75vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["l"]}) {
+      height: 3vw;
+      width: 3vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["xl"]}) {
+      width: 2.6vw;
+      height: 2.6vw;
+    }
 
     :hover {
       transform: scale(1.5);

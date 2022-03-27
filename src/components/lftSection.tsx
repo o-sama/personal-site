@@ -6,7 +6,7 @@ import { iconMap } from "../assets";
 import styled, { useTheme } from "styled-components";
 import { Row, Column } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
-import { light } from "../styled-components/themes";
+import { breakpoints } from "../styled-components/themes";
 
 interface Props {}
 
@@ -17,16 +17,56 @@ Object.entries(resumeFile["Languages and Tools"]).map((entry) => {
     const ComponentLight = styled(iconMap[element]["lightMode"])`
       margin-left: 12.5%;
       margin-right: 12.5%;
-      height: 5vw;
-      width: 5vw;
+      height: 9.25vw;
+      width: 9.25vw;
       align-self: center;
+
+      @media only screen and (min-width: ${breakpoints["s"]}) {
+        width: 7.5vw;
+        height: 7.5vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["m"]}) {
+        width: 6.25vw;
+        height: 6.25vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["l"]}) {
+        height: 5vw;
+        width: 5vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["xl"]}) {
+        width: 4.4vw;
+        height: 4.4vw;
+      }
     `;
     const ComponentDark = styled(iconMap[element]["darkMode"])`
       margin-left: 12.5%;
       margin-right: 12.5%;
-      height: 5vw;
-      width: 5vw;
+      height: 9.25vw;
+      width: 9.25vw;
       align-self: center;
+
+      @media only screen and (min-width: ${breakpoints["s"]}) {
+        width: 7.5vw;
+        height: 7.5vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["m"]}) {
+        width: 6.25vw;
+        height: 6.25vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["l"]}) {
+        height: 5vw;
+        width: 5vw;
+      }
+
+      @media only screen and (min-width: ${breakpoints["xl"]}) {
+        width: 4.4vw;
+        height: 4.4vw;
+      }
     `;
     iconColsLight[element] = (
       <Column span={2} style={{ aspectRatio: "1/1" }} key={element}>
@@ -42,7 +82,7 @@ Object.entries(resumeFile["Languages and Tools"]).map((entry) => {
 });
 
 const LftSection: FC<Props> = () => {
-  const theme = useTheme() as typeof light;
+  const theme = useTheme();
   const rows = Object.entries(resumeFile["Languages and Tools"]).map(
     (entry) => {
       return (
