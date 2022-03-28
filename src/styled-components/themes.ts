@@ -171,7 +171,7 @@ const dark: DefaultTheme = {
 };
 
 const breakpoints = {
-  xs: "400px",
+  xs: "450px",
   s: "600px",
   m: "900px",
   l: "1200px",

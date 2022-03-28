@@ -40,6 +40,7 @@ export const Layout = ({
         <div
           style={{
             minHeight: "100vh",
+            minWidth: "100vw",
             display: "flex",
             flexDirection: "column",
             background: `${theme["background"]["primary"]}`,
