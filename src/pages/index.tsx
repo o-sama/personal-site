@@ -48,16 +48,12 @@ const Image = styled.img`
 `;
 
 // markup
-const IndexPage = () => {
-  const [aboutMaxSpan, setAboutMaxSpan] = useState(
-    document.body.clientWidth > 600 ? 8 : 12
-  );
-  const [interestsMaxSpan, setInterestsMaxSpan] = useState(
-    document.body.clientWidth > 600 ? 4 : 12
-  );
+const IndexPage: React.FC = () => {
+  const [aboutMaxSpan, setAboutMaxSpan] = useState(12);
+  const [interestsMaxSpan, setInterestsMaxSpan] = useState(12);
 
   const handleResize = () => {
-    const currentWindowWidth = document.body.clientWidth;
+    const currentWindowWidth = document?.body.clientWidth;
     currentWindowWidth < 600 && aboutMaxSpan !== 12
       ? setAboutMaxSpan(12)
       : setAboutMaxSpan(8);
@@ -66,7 +62,13 @@ const IndexPage = () => {
       : setInterestsMaxSpan(4);
   };
 
-  window.addEventListener("resize", handleResize);
+  React.useEffect(() => {
+    if (document.body.clientWidth > 600) {
+      setAboutMaxSpan(8);
+      setInterestsMaxSpan(4);
+    }
+    window.addEventListener("resize", handleResize);
+  });
 
   return (
     <Layout>
