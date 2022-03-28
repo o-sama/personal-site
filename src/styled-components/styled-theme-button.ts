@@ -14,7 +14,9 @@ export const ThemeButton = styled.button`
   align-self: center;
 
   /* Transforms & Transitions */
-  transition: all ease-in-out 0.35s;
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
 
   input {
     opacity: 0;
@@ -55,8 +57,12 @@ export const ThemeIconContainer = styled(Column)<{ switch: boolean }>`
     props.theme["name"] === "light" ? "#a9a9a9" : "#333333"};
 
   transform: ${(props) =>
-    props.switch ? "translateX(3.75vw)" : "translateX(0)"};
-  transition: all ease-in-out 0.3s;
+    props.switch
+      ? "translateX(3.75vw) translateZ(0)"
+      : "translateX(0) translateZ(0)"};
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
 
   @media only screen and (min-width: ${breakpoints["s"]}) {
     width: 2.63vw;
@@ -64,7 +70,9 @@ export const ThemeIconContainer = styled(Column)<{ switch: boolean }>`
     left: 0.21vw;
     bottom: 0.188vw;
     transform: ${(props) =>
-      props.switch ? "translateX(3vw)" : "translateX(0)"};
+      props.switch
+        ? "translateX(3vw) translateZ(0)"
+        : "translateX(0) translateZ(0)"};
   }
 
   @media only screen and (min-width: ${breakpoints["m"]}) {
@@ -73,7 +81,9 @@ export const ThemeIconContainer = styled(Column)<{ switch: boolean }>`
     left: 0.175vw;
     bottom: 0.156vw;
     transform: ${(props) =>
-      props.switch ? "translateX(2.5vw)" : "translateX(0)"};
+      props.switch
+        ? "translateX(2.5vw) translateZ(0)"
+        : "translateX(0) translateZ(0)"};
   }
 
   @media only screen and (min-width: ${breakpoints["l"]}) {
@@ -82,7 +92,9 @@ export const ThemeIconContainer = styled(Column)<{ switch: boolean }>`
     left: 0.14vw;
     bottom: 0.125vw;
     transform: ${(props) =>
-      props.switch ? "translateX(2vw)" : "translateX(0)"};
+      props.switch
+        ? "translateX(2vw) translateZ(0)"
+        : "translateX(0) translateZ(0)"};
   }
 
   @media only screen and (min-width: ${breakpoints["xl"]}) {
@@ -91,6 +103,8 @@ export const ThemeIconContainer = styled(Column)<{ switch: boolean }>`
     left: 0.12vw;
     bottom: 0.11vw;
     transform: ${(props) =>
-      props.switch ? "translateX(1.75vw)" : "translateX(0)"};
+      props.switch
+        ? "translateX(1.75vw) translateZ(0)"
+        : "translateX(0) translateZ(0)"};
   }
 `;

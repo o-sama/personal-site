@@ -19,12 +19,12 @@ const Dimmer = styled.div`
   /* width: 100%; */
   z-index: 1500;
   background: black;
-  transition: all 0.35s ease-in-out;
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   position: fixed;
   animation: ${animateDimmer} ease-in-out 1.5s;
   visibility: hidden;
 `;
-
-const Logo = styled(siteIcons["site"]["lightMode"])``;
 
 export { Dimmer };

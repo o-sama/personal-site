@@ -1,13 +1,13 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import resumeFile from "../content/resume.json";
 import { iconMap } from "../assets";
 
 // styles
 import styled, { useTheme } from "styled-components";
-import { Row, Column } from "../styled-components/styled-grid";
+import { Column, Row } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
 import { StyledListItem } from "../styled-components/styled-list";
-import { light } from "../styled-components/themes";
+import { breakpoints } from "../styled-components/themes";
 
 interface Props {}
 
@@ -15,77 +15,105 @@ const iconColsLight: { [key: string]: any } = {};
 const iconColsDark: { [key: string]: any } = {};
 resumeFile["Previous Experience"].map((exp) => {
   const ComponentLight = styled(iconMap[exp["logo"]]["lightMode"])`
-    height: 5vw;
-    width: 5vw;
+    height: 9.25vw;
+    width: 9.25vw;
     align-self: center;
+
+    @media only screen and (min-width: ${breakpoints["s"]}) {
+      width: 7.5vw;
+      height: 7.5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["m"]}) {
+      width: 6.25vw;
+      height: 6.25vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["l"]}) {
+      height: 5vw;
+      width: 5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["xl"]}) {
+      width: 4.4vw;
+      height: 4.4vw;
+    }
   `;
   const ComponentDark = styled(iconMap[exp["logo"]]["darkMode"])`
-    /* margin-left: 20%; */
-    height: 5vw;
-    width: 5vw;
+    height: 9.25vw;
+    width: 9.25vw;
     align-self: center;
+
+    @media only screen and (min-width: ${breakpoints["s"]}) {
+      width: 7.5vw;
+      height: 7.5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["m"]}) {
+      width: 6.25vw;
+      height: 6.25vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["l"]}) {
+      height: 5vw;
+      width: 5vw;
+    }
+
+    @media only screen and (min-width: ${breakpoints["xl"]}) {
+      width: 4.4vw;
+      height: 4.4vw;
+    }
   `;
   iconColsLight[exp["logo"]] = (
-    <Column span={1.5} key={exp["position"]}>
+    <Row center key={exp["position"]}>
       <ComponentLight />
-    </Column>
+    </Row>
   );
   iconColsDark[exp["logo"]] = (
-    <Column span={1.5} style={{ justifyContent: "end" }} key={exp["position"]}>
+    <Row center key={exp["position"]}>
       <ComponentDark />
-    </Column>
+    </Row>
   );
 });
 
 const ExperienceSection: FC<Props> = () => {
-  const theme = useTheme() as typeof light;
+  const theme = useTheme();
   return (
     <>
       {resumeFile["Previous Experience"].map((exp) => {
         return (
-          <Row key={exp["position"]}>
-            <Row center>
-              {/* style={{ width: `${100 / 6}%`, marginLeft: "auto" }} */}
-              {theme["name"] === "light"
-                ? iconColsLight[exp["logo"]]
-                : iconColsDark[exp["logo"]]}
-              <Column span={6}>
-                <Row center style={{ marginLeft: `-${(100 / 12) * 1.5}%` }}>
-                  <H3>{exp["position"]}</H3>
-                </Row>
-                <Row
-                  secondary
-                  center
-                  style={{ marginLeft: `-${(100 / 12) * 1.5}%` }}
-                >
-                  <strong>{exp["company"]}</strong>
-                </Row>
-                <Row
-                  secondary
-                  center
-                  style={{ marginLeft: `-${(100 / 12) * 1.5}%` }}
-                >
-                  {exp["locaiton"]}
-                </Row>
-                <Row
-                  secondary
-                  center
-                  style={{ marginLeft: `-${(100 / 12) * 1.5}%` }}
-                >
-                  <i>{exp["dateRange"]}</i>
-                </Row>
-              </Column>
-            </Row>
-            <Row>
-              <ul>
-                {exp["description"].map((e, i) => (
-                  <StyledListItem
-                    dangerouslySetInnerHTML={{ __html: e }}
-                    key={i}
-                  />
-                ))}
-              </ul>
-            </Row>
+          <Row key={exp["position"]} style={{ textAlign: "center" }}>
+            <Column>
+              <Row center>
+                <Column>
+                  <Row center>
+                    <H3>{exp["position"]}</H3>
+                  </Row>
+                  {theme["name"] === "light"
+                    ? iconColsLight[exp["logo"]]
+                    : iconColsDark[exp["logo"]]}
+                  <Row secondary center>
+                    <strong>{exp["company"]}</strong>
+                  </Row>
+                  <Row secondary center>
+                    {exp["locaiton"]}
+                  </Row>
+                  <Row secondary center>
+                    <i>{exp["dateRange"]}</i>
+                  </Row>
+                </Column>
+              </Row>
+              <Row style={{ textAlign: "left" }}>
+                <ul style={{ paddingLeft: "5%" }}>
+                  {exp["description"].map((e, i) => (
+                    <StyledListItem
+                      dangerouslySetInnerHTML={{ __html: e }}
+                      key={i}
+                    />
+                  ))}
+                </ul>
+              </Row>
+            </Column>
           </Row>
         );
       })}

@@ -12,7 +12,7 @@ import { Card } from "../styled-components/styled-card";
 import { SecondaryText } from "../styled-components/styled-span";
 
 const CardContainer = styled(Column)`
-  margin: 1.5vw 1.5vw;
+  margin: 1.5vw 0;
   /* align-self: center; */
   height: fit-content;
   width: fit-content;
@@ -21,7 +21,7 @@ const CardContainer = styled(Column)`
 const projects = projectsFile["projectList"].map((p) => {
   return (
     <a href={p["link"]} target="_blank" aria-label={p["name"]}>
-      <CardContainer span={6}>
+      <CardContainer minSpan={6}>
         <Card>
           <Row center>{p["name"]}</Row>
           <Row center>
@@ -47,14 +47,18 @@ const ProjectsPage = () => {
         <title>Contact</title>
         <H1>Projects</H1>
         <StyledSection>
-          <Row center>
-            {projects.map((p) => p)}
-            <CardContainer span={6}>
-              <Card>
-                <Row center>Coming Soon!</Row>
-              </Card>
-            </CardContainer>
-          </Row>
+          <Column minSpan={12}>
+            <Row>
+              {projects.map((p) => p)}
+              <div>
+                <CardContainer minSpan={6}>
+                  <Card>
+                    <Row center>Coming Soon!</Row>
+                  </Card>
+                </CardContainer>
+              </div>
+            </Row>
+          </Column>
         </StyledSection>
       </main>
     </Layout>

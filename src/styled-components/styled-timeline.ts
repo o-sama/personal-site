@@ -15,11 +15,16 @@ const TimelineDiv = styled.div<{ gradients: string; shouldBeSmall: boolean }>`
   cursor: pointer;
 
   /* Transforms & Transitions */
-  transform: ${(props) =>
-    props.shouldBeSmall
-      ? "translateZ(0) scale(0.95)"
-      : " translateZ(0) scale(1.1)"};
-  transition: all ease-in-out 0.35s;
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    transform: ${(props) =>
+      props.shouldBeSmall
+        ? "translateZ(0) scale(0.95)"
+        : " translateZ(0) scale(1.1)"};
+  }
+
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   backface-visibility: ${(props) =>
     props.shouldBeSmall ? "hidden" : "visible"};
 
@@ -36,7 +41,9 @@ const TimelineNode = styled.div<{ mgin: number; gradients: string }>`
   width: 1.75vw;
   position: absolute;
   background: linear-gradient(to bottom, ${(props) => props.gradients});
-  transition: all ease-in-out 0.35s;
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   top: ${(props) => `${props.mgin}%`};
   border-radius: 50%;
   cursor: pointer;
@@ -61,8 +68,8 @@ const TimelineText = styled(Row)<{
   position: absolute;
 
   /* Transforms & Transitions */
-  opacity: ${(props) => (props.shouldBeHidden ? 0 : 1)};
-  visibility: ${(props) => (props.shouldBeHidden ? "hidden" : "visible")};
+  opacity: 0;
+  visibility: hidden;
   transition: ${(props) => `${0.35 + 0.35 * props.current}s`};
 
   @media only screen and (min-width: ${breakpoints["s"]}) {
@@ -71,6 +78,8 @@ const TimelineText = styled(Row)<{
 
   @media only screen and (min-width: ${breakpoints["m"]}) {
     font-size: ${(props) => props.theme["font"]["size"]["m"]["secondary"]};
+    opacity: ${(props) => (props.shouldBeHidden ? 0 : 1)};
+    visibility: ${(props) => (props.shouldBeHidden ? "hidden" : "visible")};
   }
 
   @media only screen and (min-width: ${breakpoints["l"]}) {

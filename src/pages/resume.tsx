@@ -4,7 +4,7 @@ import { Layout } from "../components/layout";
 
 // styles
 import { StyledSection } from "../styled-components/styled-section";
-import { Row } from "../styled-components/styled-grid";
+import { Row, Column } from "../styled-components/styled-grid";
 import { H1, H2 } from "../styled-components/styled-headers";
 import { HiddenAnchor } from "../styled-components/styled-anchor";
 
@@ -30,7 +30,9 @@ const ResumePage = () => {
               <H2>Languages & Tools </H2>
             </Row>
             <Row container center>
-              <LftSection />
+              <Column>
+                <LftSection />
+              </Column>
             </Row>
           </StyledSection>
 
@@ -41,7 +43,9 @@ const ResumePage = () => {
               <H2>Certifications</H2>
             </Row>
             <Row container center>
-              <CertSection />
+              <Column>
+                <CertSection />
+              </Column>
             </Row>
           </StyledSection>
 
@@ -52,7 +56,9 @@ const ResumePage = () => {
               <H2>Previous Experience</H2>
             </Row>
             <Row container center>
-              <ExperienceSection />
+              <Column>
+                <ExperienceSection />
+              </Column>
             </Row>
           </StyledSection>
 
@@ -63,7 +69,9 @@ const ResumePage = () => {
               <H2>Projects</H2>
             </Row>
             <Row container center>
-              <ProjectSection />
+              <Column>
+                <ProjectSection />
+              </Column>
             </Row>
           </StyledSection>
 
@@ -74,7 +82,9 @@ const ResumePage = () => {
               <H2>Education</H2>
             </Row>
             <Row container center>
-              <EducationSection />
+              <Column>
+                <EducationSection />
+              </Column>
             </Row>
           </StyledSection>
         </main>

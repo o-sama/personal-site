@@ -69,12 +69,12 @@ Object.entries(resumeFile["Languages and Tools"]).map((entry) => {
       }
     `;
     iconColsLight[element] = (
-      <Column span={2} style={{ aspectRatio: "1/1" }} key={element}>
+      <Column minSpan={2} style={{ aspectRatio: "1/1" }} key={element}>
         <ComponentLight />
       </Column>
     );
     iconColsDark[element] = (
-      <Column span={2} style={{ aspectRatio: "1/1" }} key={element}>
+      <Column minSpan={2} style={{ aspectRatio: "1/1" }} key={element}>
         <ComponentDark />
       </Column>
     );
@@ -87,15 +87,13 @@ const LftSection: FC<Props> = () => {
     (entry) => {
       return (
         <React.Fragment key={entry[0]}>
-          <Row>
-            <Row center>
-              <H3 key={"h3_" + entry[0]}>{entry[0]}</H3>
-            </Row>
-            <Row center container>
-              {entry[1].map((e) =>
-                theme["name"] === "light" ? iconColsLight[e] : iconColsDark[e]
-              )}
-            </Row>
+          <Row center>
+            <H3 key={"h3_" + entry[0]}>{entry[0]}</H3>
+          </Row>
+          <Row center container>
+            {entry[1].map((e) =>
+              theme["name"] === "light" ? iconColsLight[e] : iconColsDark[e]
+            )}
           </Row>
         </React.Fragment>
       );

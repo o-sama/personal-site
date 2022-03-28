@@ -48,7 +48,7 @@ const CertSection: FC<Props> = () => {
       {resumeFile["Certifications"].map((cert) => {
         return (
           <React.Fragment key={cert["certification"]}>
-            <Row>
+            <Column>
               <Row center>
                 <H3>{cert["certification"]}</H3>
               </Row>
@@ -65,7 +65,7 @@ const CertSection: FC<Props> = () => {
                   embedBadgeId={cert["embedBadgeId"]}
                 />
               </Row>
-            </Row>
+            </Column>
           </React.Fragment>
         );
       })}

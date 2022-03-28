@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import resumeFile from "../content/resume.json";
 
 // styles
-import { Row } from "../styled-components/styled-grid";
+import { Column, Row } from "../styled-components/styled-grid";
 import { H3 } from "../styled-components/styled-headers";
 import { StyledListItem } from "../styled-components/styled-list";
 
@@ -13,7 +13,7 @@ const ProjectSection: FC<Props> = () => {
     <>
       {resumeFile["Projects"].map((proj) => {
         return (
-          <Row key={proj["name"]}>
+          <Column key={proj["name"]}>
             <Row center>
               <H3>{proj["name"]}</H3>
             </Row>
@@ -30,7 +30,7 @@ const ProjectSection: FC<Props> = () => {
                 ))}
               </ul>
             </Row>
-          </Row>
+          </Column>
         );
       })}
     </>

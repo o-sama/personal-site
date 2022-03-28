@@ -1,54 +1,65 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+    <img alt="Logo" src="./src/images/icon.png" width="60" />
 </p>
 <h1 align="center">
-  Gatsby minimal TypeScript starter
+  Personal Website
 </h1>
 
-## 🚀 Quick start
+## Intro
 
-1.  **Create a Gatsby site.**
+The purpose of this website is twofold:
+1. Build a site which includes info about me and allows people to get to know me a little better than through my LinkedIn page while showcasing future projects and blogs where I keep my thoughts organized.
+2. Get some familiarity back with tech stacks that I haven't used for some years as well as learn them in a little more depth. I took this chance to get familiar with Gatsby since I've not used it before.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby
-    ```
+I plan to make a Gatsby starter out of this in the future, but will wait until I'm satisfied with the state of it (including more automation and ease of use) before making one.
 
-2.  **Start developing.**
+## Roadmap
 
-    Navigate into your new site’s directory and start it up.
+I plan to include a more structured roadmap in the future, but this is my current list of goals for the site:
+### Landing Page
+- [x]  Picture
+- [x]  About section styling
+- [ ]  Better alignment
+### Resume
+- [x]  Timeline nodes correct margins
+- [ ]  Icons on timeline instead of nodes
+- [x]  Text animation on timeline
+- [x]  Theme icon + animation
+- [x]  Download pdf resume
+  - [ ]  Create updated pdf resume
+- [ ]  Test using horizontal sliders for the diferrent sections - specifically for the experience and projects section.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Projects
+- [x]  Add project cards
+- [x]  Link card click to GitHub
+- [x]  Bring into focus on hover (bigger and blur others)
 
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.tsx` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+### Blog
+- [ ] Create blog format
+- [ ] Use Notion API to fetch blogs from personal workspace based on list or cron job
+- [ ] Create blog cards
+- [ ] Create blog layout
+- [ ] Write blogs!
+### Overall
+- [x]  Add keys to any element arrays
+- [ ]  Optimize icon usage
+    - [ ]  Dark mode only has dark mode icons insead of pulling shared icons twice
+    - [x]  Create icons statically
+- [x]  Optimize fonts
+- [ ]  Optimize seo
+- [x]  Optimize rendering
+- [x]  Themify everything
+  - [x]  Fonts
+  - [x]  Icons
+  - [x]  Buttons
+  - [x]  Links
+  - [x]  Nav
+  - [x]  Theme colors
+  - [x]  Transitions
+- [ ]  Responsiveness
+  - [x]  Landing page
+  - [x]  Resume
+  - [x]  Projects
+  - [x]  Contact
+  - [ ]  Blogs - Not done since blog section is still not done.

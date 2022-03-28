@@ -29,9 +29,11 @@ const NavLink = styled(Link)`
   text-decoration: none;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateZ(0);
   }
-  transition: all 0.35s ease-in-out;
+  transition: all
+    ${(props) =>
+      `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
 `;
 
 const ThemeIconLight = styled(themeIcons["theme"]["lightMode"])<{
@@ -154,13 +156,11 @@ const Header: FC<Props> = ({ menuLinks }) => {
     <header>
       <Nav>
         <Row
-          center
           style={{
-            justifyContent: "right",
             width: "100%",
           }}
         >
-          <Column span={2}>
+          <Column maxSpan={2}>
             <Link
               to="/"
               aria-label="home"
@@ -169,13 +169,10 @@ const Header: FC<Props> = ({ menuLinks }) => {
               {theme["name"] === "light" ? <IconLight /> : <IconDark />}
             </Link>
           </Column>
-          <Column span={8} style={{ margin: "0 auto" }}>
+          <Column maxSpan={8} style={{ margin: "0 auto" }}>
             <Row center style={{ flexWrap: "nowrap" }}>
               {menuLinks.map((link) => (
-                <Column
-                  key={link.name}
-                  style={{ width: "fit-content", padding: "1vw 1.5vw" }}
-                >
+                <Column key={link.name} style={{ padding: "1vw 1.5vw" }}>
                   <NavLink to={link.link} aria-label={link.name}>
                     {link.name}
                   </NavLink>
@@ -185,9 +182,8 @@ const Header: FC<Props> = ({ menuLinks }) => {
           </Column>
 
           <Column
-            span={2}
+            maxSpan={2}
             style={{
-              marginLeft: "auto",
               textAlign: "center",
             }}
           >

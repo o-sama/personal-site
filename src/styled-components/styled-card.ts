@@ -11,7 +11,10 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${(props) => props.theme["background"]["primary"]};
+  background: ${(props) =>
+    props.theme["name"] === "light"
+      ? props.theme["background"]["primary"]
+      : props.theme["background"]["liftedElements"]};
 
   :hover {
     transform: scale3d(1.1, 1.1, 1.1);

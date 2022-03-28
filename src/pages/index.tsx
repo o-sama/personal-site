@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import { Layout } from "../components/layout";
 import { me } from "../assets";
 import indexData from "../content/index.json";
@@ -9,6 +10,7 @@ import { Column, Row } from "../styled-components/styled-grid";
 import { StyledList, StyledListItem } from "../styled-components/styled-list";
 import { StyledSection } from "../styled-components/styled-section";
 import { H1, H2 } from "../styled-components/styled-headers";
+import { breakpoints } from "../styled-components/themes";
 
 // data
 const links = [
@@ -58,59 +60,114 @@ const links = [
 ];
 
 const Image = styled.img`
-  height: 15vw;
-  width: 15vw;
-
-  border: 5px solid
+  height: 31vw;
+  width: 31vw;
+  border: 3px solid
     ${(props) => props.theme["background"]["foregroundElements"]};
+
+  @media only screen and (min-width: ${breakpoints["s"]}) {
+    width: 25vw;
+    height: 25vw;
+    border: 3px solid
+      ${(props) => props.theme["background"]["foregroundElements"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["m"]}) {
+    width: 20vw;
+    height: 20vw;
+    border: 4px solid
+      ${(props) => props.theme["background"]["foregroundElements"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["l"]}) {
+    height: 15vw;
+    width: 15vw;
+    border: 5px solid
+      ${(props) => props.theme["background"]["foregroundElements"]};
+  }
+
+  @media only screen and (min-width: ${breakpoints["xl"]}) {
+    width: 13.125vw;
+    height: 13.125vw;
+    border: 6px solid
+      ${(props) => props.theme["background"]["foregroundElements"]};
+  }
+
   border-radius: 50%;
 `;
 
+const isBrowser = () => typeof window !== "undefined";
+
 // markup
 const IndexPage = () => {
+  const [aboutMaxSpan, setAboutMaxSpan] = useState(
+    isBrowser() && window.innerWidth < 500 ? 12 : 8
+  );
+  const [interestsMaxSpan, setInterestsMaxSpan] = useState(
+    isBrowser() && window.innerWidth < 500 ? 12 : 4
+  );
+
+  const handleResize = () => {
+    const currentWindowWidth = isBrowser() && window.innerWidth;
+    currentWindowWidth < 600 && aboutMaxSpan !== 12
+      ? setAboutMaxSpan(12)
+      : setAboutMaxSpan(8);
+    currentWindowWidth < 600 && interestsMaxSpan !== 12
+      ? setInterestsMaxSpan(12)
+      : setInterestsMaxSpan(4);
+  };
+
+  isBrowser() && window.addEventListener("resize", handleResize);
+
   return (
     <Layout>
       <main>
         <title>Home Page</title>
-        <Row>
-          <Column span={9}>
-            <StyledSection style={{ height: "100%" }}>
-              <H1 style={{ paddingBottom: "3vh" }}>About Me</H1>
-              {indexData["About"].map((p) => (
-                <Row container style={{ marginBottom: "3vh" }}>
-                  {p.map((s) => s)}
-                </Row>
-              ))}
-            </StyledSection>
-          </Column>
-          <Column
-            span={3}
-            style={{
-              height: "100%",
-              zIndex: "10",
-            }}
-          >
-            <StyledSection style={{ height: "100%" }}>
-              <Row
-                center
+        <StyledSection>
+          <Column>
+            <Row
+              style={{
+                paddingBottom: "3vh",
+                marginTop: "5%",
+              }}
+            >
+              <Column minSpan={8}>
+                <H1 style={{ alignSelf: "center" }}>About Me</H1>
+              </Column>
+              <Column minSpan={4}>
+                <Image src={me} alt="Me!" style={{ alignSelf: "center" }} />
+              </Column>
+            </Row>
+            <Row>
+              <Column maxSpan={aboutMaxSpan}>
+                {indexData["About"].map((p) => (
+                  <Row container style={{ margin: "2vh auto" }}>
+                    {p.map((s) => s)}
+                  </Row>
+                ))}
+              </Column>
+              <Column
+                maxSpan={interestsMaxSpan}
                 style={{
-                  marginTop: "10%",
+                  width: "100%",
+                  height: "100%",
+                  zIndex: "10",
                 }}
               >
-                <Image src={me} alt="Me!" />
-              </Row>
-              <Row container center>
-                <H2>What I like</H2>
-                <StyledList style={{ marginLeft: "-7.5%" }}>
-                  {indexData["Interests"].map((e, i) => (
-                    <StyledListItem key={i}>{e}</StyledListItem>
-                  ))}
-                </StyledList>
-              </Row>
-            </StyledSection>
+                <Row>
+                  <H2 style={{ alignSelf: "center" }}>What I Like</H2>
+                </Row>
+                <Row style={{ justifyContent: "left" }}>
+                  <StyledList>
+                    {indexData["Interests"].map((e, i) => (
+                      <StyledListItem key={i}>{e}</StyledListItem>
+                    ))}
+                  </StyledList>
+                </Row>
+              </Column>
+            </Row>
           </Column>
-        </Row>
-
+        </StyledSection>
         {/* <h1 style={styles.headingStyles}>
           Congratulations
           <br />

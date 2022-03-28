@@ -26,7 +26,7 @@ const TextArea = styled.textarea`
 `;
 
 const Form = styled.form`
-  width: 80%;
+  width: 90%;
 `;
 
 export { Input, Label, TextArea, Form };

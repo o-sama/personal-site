@@ -40,9 +40,11 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
     }
 
     :hover {
-      transform: scale(1.5);
+      transform: scale(1.5) translateZ(0);
     }
-    transition: all 0.35s ease-in-out;
+    transition: all
+      ${(props) =>
+        `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   `;
   const ComponentDark = styled(e[1]["darkMode"])`
     height: 5.25vw;
@@ -71,11 +73,13 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
     :hover {
       transform: scale(1.5);
     }
-    transition: all 0.35s ease-in-out;
+    transition: all
+      ${(props) =>
+        `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   `;
 
   iconColsLight[e[0]] = (
-    <Column key={e[0]} span={1.5}>
+    <Column key={e[0]} minSpan={1.5}>
       {e[0] === "download" ? (
         <a
           href={link}
@@ -99,7 +103,7 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
   );
 
   iconColsDark[e[0]] = (
-    <Column key={e[0]} span={1.5}>
+    <Column key={e[0]} minSpan={1.5}>
       {e[0] === "download" ? (
         <a
           href={link}
