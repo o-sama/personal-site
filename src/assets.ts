@@ -42,6 +42,7 @@ import download from "./images/download.svg";
 import downloadDark from "./images/downloaddark.svg";
 import downloadFile from "./content/resume.pdf";
 import website from "./images/website.png";
+import Datadog from "./images/datadog.svg";
 
 interface Icon {
   [key: string]: { [key: string]: any };
@@ -77,6 +78,7 @@ const iconMap: Icon = {
   Tmmc: { lightMode: Tmmc, darkMode: Tmmc },
   Flipp: { lightMode: Flipp, darkMode: Flipp },
   Lh: { lightMode: Lh, darkMode: Lh },
+  Datadog: { lightMode: Datadog, darkMode: Datadog },
 };
 
 const socials: Icon = {

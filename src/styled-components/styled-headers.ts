@@ -3,7 +3,6 @@ import { breakpoints } from "./themes";
 
 const H1 = styled.h1`
   text-align: center;
-  padding-top: 2vh;
   z-index: 11;
   color: ${(props) => props.theme["text"]["headers"]};
   font-family: ${(props) => props.theme["font"]["family"]["secondary"]};

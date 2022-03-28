@@ -17,22 +17,22 @@ export const Nav = styled.nav`
 
   /* Content */
   font-family: ${(props) => props.theme["font"]["family"]["secondary"]};
-  font-size: ${(props) => props.theme["font"]["size"]["xs"]["primary"]};
+  font-size: ${(props) => props.theme["font"]["size"]["xs"]["secondary"]};
   color: ${(props) => props.theme["text"]["primary"]};
 
   @media only screen and (min-width: ${breakpoints["s"]}) {
-    font-size: ${(props) => props.theme["font"]["size"]["s"]["primary"]};
+    font-size: ${(props) => props.theme["font"]["size"]["s"]["secondary"]};
   }
 
   @media only screen and (min-width: ${breakpoints["m"]}) {
-    font-size: ${(props) => props.theme["font"]["size"]["m"]["primary"]};
+    font-size: ${(props) => props.theme["font"]["size"]["m"]["secondary"]};
   }
 
   @media only screen and (min-width: ${breakpoints["l"]}) {
-    font-size: ${(props) => props.theme["font"]["size"]["l"]["primary"]};
+    font-size: ${(props) => props.theme["font"]["size"]["l"]["secondary"]};
   }
 
   @media only screen and (min-width: ${breakpoints["xl"]}) {
-    font-size: ${(props) => props.theme["font"]["size"]["xl"]["primary"]};
+    font-size: ${(props) => props.theme["font"]["size"]["xl"]["secondary"]};
   }
 `;

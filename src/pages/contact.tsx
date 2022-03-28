@@ -18,6 +18,7 @@ const ClearButton = styled(Input)`
   border-style: outset;
   border-color: ${(props) => props.theme["button"]["borderColor"]};
   background: ${(props) => props.theme["button"]["backgroundColor"]["regular"]};
+  font-size: ${(props) => props.theme["font"]["size"]["xs"]["secondary"]};
   color: ${(props) => props.theme["text"]["secondary"]};
 
   :hover {
@@ -59,7 +60,7 @@ const ClearButton = styled(Input)`
 `;
 
 const FormRow = styled(Row)`
-  padding: 0.75vw 0;
+  padding: 0.75vh 0;
 `;
 
 const ContactPage = () => {
@@ -76,43 +77,45 @@ const ContactPage = () => {
             netlify-honeypot="bot-field"
             data-netlify="true"
             style={{ margin: "0 auto" }}
+            action="#"
           >
             <Row center>
               <Column minSpan={12}>
-                <FormRow center>
-                  <Column minSpan={2}>
+                <FormRow>
+                  <Column>
                     <Label htmlFor="name">Name</Label>
                   </Column>
                   <Column minSpan={8}>
                     <Input type="text" name="name" id="name" required />
                   </Column>
                 </FormRow>
-                <FormRow center>
-                  <Column minSpan={2}>
+                <FormRow>
+                  <Column>
                     <Label htmlFor="email">Email</Label>
                   </Column>
                   <Column minSpan={8}>
                     <Input type="email" name="email" id="email" required />
                   </Column>
                 </FormRow>
-                <FormRow center>
-                  <Column minSpan={2}>
+                <FormRow>
+                  <Column>
                     <Label htmlFor="subject">Subject</Label>
                   </Column>
                   <Column minSpan={8}>
                     <Input type="text" name="subject" id="subject" required />
                   </Column>
                 </FormRow>
-                <FormRow center>
-                  <Column minSpan={2}>
+                <FormRow>
+                  <Column>
                     <Label htmlFor="message">Message</Label>
                   </Column>
                   <Column minSpan={8}>
                     <TextArea name="message" id="message" rows={5} required />
                   </Column>
                 </FormRow>
-                <FormRow center>
-                  <Column minSpan={2}>
+                <FormRow>
+                  <Column>
+                    <Label />
                     <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="contact" />
                   </Column>
@@ -124,7 +127,7 @@ const ContactPage = () => {
                       <ClearButton
                         type="reset"
                         value="Clear"
-                        style={{ marginLeft: "auto" }}
+                        // style={{ marginLeft: "auto" }}
                         name="clear"
                       />
                     </FormRow>

@@ -96,55 +96,55 @@ const ThemeIconDark = styled(themeIcons["theme"]["darkMode"])<{
 
 const IconLight = styled(siteIcons["site"]["lightMode"])`
   /* Properties */
-  height: 4.7vw;
-  width: 4.7vw;
+  height: 6vw;
+  width: 6vw;
   align-self: center;
 
   @media only screen and (min-width: ${breakpoints["s"]}) {
-    width: 3.75vw;
-    height: 3.75vw;
+    width: 5vw;
+    height: 5vw;
   }
 
   @media only screen and (min-width: ${breakpoints["m"]}) {
-    width: 3.125vw;
-    height: 3.125vw;
+    width: 4vw;
+    height: 4vw;
   }
 
   @media only screen and (min-width: ${breakpoints["l"]}) {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 3vw;
+    height: 3vw;
   }
 
   @media only screen and (min-width: ${breakpoints["xl"]}) {
-    width: 2.2vw;
-    height: 2.2vw;
+    width: 2vw;
+    height: 2vw;
   }
 `;
 
 const IconDark = styled(siteIcons["site"]["darkMode"])`
   /* Properties */
-  height: 4.7vw;
-  width: 4.7vw;
+  height: 6vw;
+  width: 6vw;
   align-self: center;
 
   @media only screen and (min-width: ${breakpoints["s"]}) {
-    width: 3.75vw;
-    height: 3.75vw;
+    width: 5vw;
+    height: 5vw;
   }
 
   @media only screen and (min-width: ${breakpoints["m"]}) {
-    width: 3.125vw;
-    height: 3.125vw;
+    width: 4vw;
+    height: 4vw;
   }
 
   @media only screen and (min-width: ${breakpoints["l"]}) {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 3vw;
+    height: 3vw;
   }
 
   @media only screen and (min-width: ${breakpoints["xl"]}) {
-    width: 2.2vw;
-    height: 2.2vw;
+    width: 2vw;
+    height: 2vw;
   }
 `;
 
@@ -160,7 +160,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
             width: "100%",
           }}
         >
-          <Column maxSpan={2}>
+          <Column maxSpan={1}>
             <Link
               to="/"
               aria-label="home"
@@ -169,7 +169,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
               {theme["name"] === "light" ? <IconLight /> : <IconDark />}
             </Link>
           </Column>
-          <Column maxSpan={8} style={{ margin: "0 auto" }}>
+          <Column maxSpan={10} style={{ margin: "0 auto" }}>
             <Row center style={{ flexWrap: "nowrap" }}>
               {menuLinks.map((link) => (
                 <Column key={link.name} style={{ padding: "1vw 1.5vw" }}>
@@ -182,7 +182,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
           </Column>
 
           <Column
-            maxSpan={2}
+            maxSpan={1}
             style={{
               textAlign: "center",
             }}
