@@ -49,22 +49,29 @@ const Image = styled.img`
 
 // markup
 const IndexPage: React.FC = () => {
+  let width: number = 0;
   const [aboutMaxSpan, setAboutMaxSpan] = useState(12);
+  const [aboutMinSpan, setAboutMinSpan] = useState(12);
   const [interestsMaxSpan, setInterestsMaxSpan] = useState(12);
 
   const handleResize = () => {
-    const currentWindowWidth = document?.body.clientWidth;
-    currentWindowWidth < 600 && aboutMaxSpan !== 12
-      ? setAboutMaxSpan(12)
-      : setAboutMaxSpan(8);
-    currentWindowWidth < 600 && interestsMaxSpan !== 12
-      ? setInterestsMaxSpan(12)
-      : setInterestsMaxSpan(4);
+    const currentWindowWidth = window.innerWidth;
+    if (currentWindowWidth > 600 && currentWindowWidth != width) {
+      setAboutMaxSpan(8);
+      setAboutMinSpan(8);
+      setInterestsMaxSpan(4);
+    } else if (currentWindowWidth < 600 && currentWindowWidth != width) {
+      setAboutMaxSpan(12);
+      setAboutMinSpan(12);
+      setInterestsMaxSpan(12);
+    }
   };
 
   React.useEffect(() => {
-    if (document.body.clientWidth > 600) {
+    width = window.innerWidth;
+    if (width > 600) {
       setAboutMaxSpan(8);
+      setAboutMinSpan(8);
       setInterestsMaxSpan(4);
     }
     window.addEventListener("resize", handleResize);
@@ -76,7 +83,7 @@ const IndexPage: React.FC = () => {
         <title>Home Page</title>
         <StyledSection>
           <Row>
-            <Column maxSpan={aboutMaxSpan}>
+            <Column minSpan={aboutMinSpan} maxSpan={aboutMaxSpan}>
               <Row center>
                 <H1 style={{ alignSelf: "center" }}>About Me</H1>
               </Row>

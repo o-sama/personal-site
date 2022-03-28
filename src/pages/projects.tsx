@@ -12,7 +12,7 @@ import { Card } from "../styled-components/styled-card";
 import { SecondaryText } from "../styled-components/styled-span";
 
 const CardContainer = styled(Column)`
-  margin: 1.5vw 0;
+  margin: 1.5vh 0;
   /* align-self: center; */
   height: fit-content;
   width: fit-content;

@@ -160,7 +160,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
             width: "100%",
           }}
         >
-          <Column maxSpan={1}>
+          <Column maxSpan={1.5}>
             <Link
               to="/"
               aria-label="home"
@@ -169,7 +169,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
               {theme["name"] === "light" ? <IconLight /> : <IconDark />}
             </Link>
           </Column>
-          <Column maxSpan={10} style={{ margin: "0 auto" }}>
+          <Column maxSpan={9} style={{ margin: "0 auto" }}>
             <Row center style={{ flexWrap: "nowrap" }}>
               {menuLinks.map((link) => (
                 <Column key={link.name} style={{ padding: "1vw 1.5vw" }}>
@@ -182,7 +182,7 @@ const Header: FC<Props> = ({ menuLinks }) => {
           </Column>
 
           <Column
-            maxSpan={1}
+            maxSpan={1.5}
             style={{
               textAlign: "center",
             }}
