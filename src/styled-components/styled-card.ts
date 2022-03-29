@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { breakpoints } from "./themes";
+import { Column } from "./styled-grid";
 
-export const Card = styled.div`
+const Card = styled.div`
   width: 56.25vw;
   height: 56.25vw;
   border-radius: 0.5vw;
@@ -58,3 +59,12 @@ export const Card = styled.div`
     height: 26.25vw;
   }
 `;
+
+const CardContainer = styled(Column)`
+  margin: 1.5vh 0;
+  /* align-self: center; */
+  height: fit-content;
+  width: fit-content;
+`;
+
+export { Card, CardContainer };

@@ -8,6 +8,7 @@
 ## Intro
 
 The purpose of this website is twofold:
+
 1. Build a site which includes info about me and allows people to get to know me a little better than through my LinkedIn page while showcasing future projects and blogs where I keep my thoughts organized.
 2. Get some familiarity back with tech stacks that I haven't used for some years as well as learn them in a little more depth. I took this chance to get familiar with Gatsby since I've not used it before.
 
@@ -20,7 +21,7 @@ I plan to include a more structured roadmap in the future, but this is my curren
 ### Landing Page
 - [x]  Picture
 - [x]  About section styling
-- [ ]  Better alignment
+- [x]  Better alignment
 ### Resume
 - [x]  Timeline nodes correct margins
 - [ ]  Icons on timeline instead of nodes
@@ -36,10 +37,11 @@ I plan to include a more structured roadmap in the future, but this is my curren
 - [x]  Bring into focus on hover (bigger and blur others)
 
 ### Blog
-- [ ] Create blog format
-- [ ] Use Notion API to fetch blogs from personal workspace based on list or cron job
-- [ ] Create blog cards
-- [ ] Create blog layout
+- [x] Create blog format
+- [x] Use MDX to write blogs with specific layout
+- [x] Create blog cards
+- [x] Create blog layout
+- [ ] Add tags to blogs
 - [ ] Write blogs!
 ### Overall
 - [x]  Add keys to any element arrays
@@ -59,7 +61,9 @@ I plan to include a more structured roadmap in the future, but this is my curren
   - [x]  Transitions
 - [ ]  Responsiveness
   - [x]  Landing page
-  - [x]  Resume
+  - [x]  Resumes
   - [x]  Projects
   - [x]  Contact
   - [ ]  Blogs - Not done since blog section is still not done.
+- [ ]  Add custom success page/popup message to form on success/failure
+- [ ]  Proper 404 page, although should avoid 

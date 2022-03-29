@@ -6,7 +6,9 @@ import { Row, Column } from "../styled-components/styled-grid";
 import styled, { useTheme } from "styled-components";
 import { StyledSection } from "../styled-components/styled-section";
 import { breakpoints } from "../styled-components/themes";
-import { TertiaryText } from "../styled-components/styled-span";
+import { SecondaryText, TertiaryText } from "../styled-components/styled-span";
+
+const now = new Date();
 
 interface Props {}
 
@@ -135,7 +137,7 @@ const Footer: FC<Props> = () => {
         <Row
           container
           center
-          style={{ height: "fit-content", padding: "1.5vh 0" }}
+          style={{ height: "fit-content", padding: "1.5vh 0 2.5vh" }}
         >
           <>
             {Object.keys(socials).map((e) =>
@@ -143,8 +145,14 @@ const Footer: FC<Props> = () => {
             )}
           </>
         </Row>
-        <Row container center style={{ padding: "1.5vh 0" }}>
+        <Row container center>
           <TertiaryText>Made with Gatsby & styled Components</TertiaryText>
+        </Row>
+        <Row container center>
+          <TertiaryText>
+            <SecondaryText>© </SecondaryText>
+            {now.getFullYear()} Osama Faqhruldin
+          </TertiaryText>
         </Row>
       </StyledSection>
     </footer>

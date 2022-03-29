@@ -10,7 +10,7 @@ import { Button } from "../styled-components/styled-button";
 import { Label, Input, Form, TextArea } from "../styled-components/styled-form";
 import { breakpoints } from "../styled-components/themes";
 
-const ClearButton = styled(Input)`
+const FormButton = styled(Input)`
   width: 20vw;
   height: 5vw;
   align-self: center;
@@ -121,10 +121,8 @@ const ContactPage = () => {
                   </Column>
                   <Column minSpan={8}>
                     <FormRow>
-                      <Button type="submit" name="submit">
-                        Send
-                      </Button>
-                      <ClearButton
+                      <FormButton type="submit" name="submit" value="Send" />
+                      <FormButton
                         type="reset"
                         value="Clear"
                         // style={{ marginLeft: "auto" }}

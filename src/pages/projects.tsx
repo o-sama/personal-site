@@ -8,15 +8,8 @@ import { projectImages } from "../assets";
 import { StyledSection } from "../styled-components/styled-section";
 import { H1 } from "../styled-components/styled-headers";
 import { Row, Column } from "../styled-components/styled-grid";
-import { Card } from "../styled-components/styled-card";
+import { Card, CardContainer } from "../styled-components/styled-card";
 import { SecondaryText } from "../styled-components/styled-span";
-
-const CardContainer = styled(Column)`
-  margin: 1.5vh 0;
-  /* align-self: center; */
-  height: fit-content;
-  width: fit-content;
-`;
 
 const projects = projectsFile["projectList"].map((p) => {
   return (
@@ -47,7 +40,7 @@ const ProjectsPage = () => {
         <title>Contact</title>
         <H1>Projects</H1>
         <StyledSection>
-          <Column minSpan={12}>
+          <Column minSpan={12} style={{ padding: "3vh 0" }}>
             <Row>
               {projects.map((p) => p)}
               <div>

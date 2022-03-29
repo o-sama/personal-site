@@ -1,5 +1,6 @@
 import * as React from "react";
-import { light } from "./src/styled-components/themes";
+import { useEffect } from "react";
+import { dark, light } from "./src/styled-components/themes";
 import {
   createGlobalStyle,
   DefaultTheme,
@@ -18,7 +19,12 @@ const GlobalBackGround = createGlobalStyle`html{
 }`;
 
 export const MyThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState(light);
+  let userTheme = null;
+  useEffect(() => {
+    userTheme = localStorage.getItem("theme");
+  }, []);
+  const [theme, setTheme] =
+    userTheme === "dark" ? useState(dark) : useState(light);
   return (
     <ThemeProvider theme={theme}>
       <ThemeUpdateContext.Provider value={setTheme}>

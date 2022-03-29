@@ -190,7 +190,11 @@ const Header: FC<Props> = ({ menuLinks }) => {
             <ThemeButton
               name="change theme"
               aria-label="change theme"
-              onClick={() => updateTheme(theme === light ? dark : light)}
+              onClick={() => {
+                const newTheme = theme === light ? dark : light;
+                updateTheme(newTheme);
+                localStorage.setItem("theme", newTheme["name"]);
+              }}
             >
               <ThemeIconContainer switch={theme === light ? false : true}>
                 {theme["name"] === "light" ? (

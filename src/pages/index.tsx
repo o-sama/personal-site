@@ -114,7 +114,6 @@ const IndexPage: React.FC = () => {
               style={{
                 width: "100%",
                 height: "100%",
-                zIndex: "10",
                 alignSelf: "flex-end",
               }}
             >

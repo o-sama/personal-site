@@ -86,7 +86,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/content/posts/images/",
       },
       __key: "images",
     },
@@ -99,14 +99,6 @@ module.exports = {
       },
       __key: "pages",
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `markdown-pages`,
-    //     path: `${__dirname}/src/markdown-pages`,
-    //   },
-    // },
-    // `gatsby-transformer-remark`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -118,5 +110,38 @@ module.exports = {
     "gatsby-plugin-react-svg",
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-netlify",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          posts: require.resolve("./src/components/blogPost.tsx"),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1500,
+            },
+          },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+              rel: `noopener`,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-remark-images`,
   ],
 };
