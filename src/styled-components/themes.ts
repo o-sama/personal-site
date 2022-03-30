@@ -65,9 +65,9 @@ const light: DefaultTheme = {
     border: "#7b5e44",
   },
   link: {
-    color: "#FFFFFF",
-    hover: "#d3d3d3",
-    used: "#d3d3d3",
+    color: "#a87e5c",
+    hover: "#7b5e44",
+    used: "#7b5e44",
   },
   shadow: {
     color: "#555555",
@@ -150,9 +150,9 @@ const dark: DefaultTheme = {
     border: "#7b5e44",
   },
   link: {
-    color: "#222222",
-    hover: "#d3d3d3",
-    used: "#d3d3d3",
+    color: "#a87e5c",
+    hover: "#7b5e44",
+    used: "#7b5e44",
   },
   shadow: {
     color: "#000000",

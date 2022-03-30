@@ -42,10 +42,10 @@
       "dateRange": "May 2020 - Present",
       "locaiton": "Toronto, Ontario, Canada",
       "description": [
-        "Architected and led development of new <strong>Kubernetes</strong> Ingress Pattern using Network Load Balancers and created a zero-downtime migration procedure moving from exsisting Classic Load Balancers on large scale clusters in production environments using <strong>Istio</strong> and <strong>Terraform</strong>.",
+        "Architected and led development of new <strong>Kubernetes</strong> Ingress Pattern using Network Load Balancers and created a zero-downtime migration procedure moving from existing Classic Load Balancers on large scale clusters in production environments using <strong>Istio</strong> and <strong>Terraform</strong>.",
         "Implemented <strong>Kubernetes</strong> Secret Store CSI Driver across several clusters and migrated ingress certificates from Kubernetes ExternalSecrets with zero-downtime in production environments.",
         "Designed and wrote several unit tests for infrastructure status and readiness using <strong>Go</strong> and <strong>TerraTest</strong> to verify post-deployment status through CICD Pipeline.",
-        "Prticipated actively in <i>L1</i> on-call rotation of 1 week shifts of 24/7 support spread over the team of 7 engineers.",
+        "Participated actively in <i>L1</i> on-call rotation of 1 week shifts of 24/7 support spread over the team of 7 engineers.",
         "Participated in the definition and implementation of the <strong>SLOs</strong>, <strong>SLAs</strong>, and <strong>SLIs</strong> for the Service Mesh Team.",
         "Designed, implemented, and updated several <strong>DataDog</strong> dashboards and monitors across multiple environments using <strong>Terraform</strong>.",
         "Refactored several parts of the project’s <strong>Terraform</strong> repositories to make them more sustainable for creating and maintaining more than 10 highly available large clusters."

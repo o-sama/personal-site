@@ -1,52 +1,42 @@
 import * as React from "react";
 import { StyledLink } from "../styled-components/styled-link";
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
+import { Row, Column } from "../styled-components/styled-grid";
+import { StyledSection } from "../styled-components/styled-section";
+import { H1 } from "../styled-components/styled-headers";
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <main>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <StyledLink to="/">Go home</StyledLink>.
-      </p>
+      <StyledSection>
+        <Row center>
+          <Column>
+            <Row>
+              <h1>Page not found</h1>
+            </Row>
+            <Row center>
+              <p>
+                Sorry{" "}
+                <span role="img" aria-label="Pensive emoji">
+                  😔
+                </span>{" "}
+                I couldn’t find what you were looking for.
+                <br />
+                {process.env.NODE_ENV === "development" ? (
+                  <>
+                    <br />
+                    Try creating a page in <code>src/pages/</code>.
+                    <br />
+                  </>
+                ) : null}
+                <br />
+                <StyledLink to="/">Go home</StyledLink>.
+              </p>
+            </Row>
+          </Column>
+        </Row>
+      </StyledSection>
     </main>
   );
 };

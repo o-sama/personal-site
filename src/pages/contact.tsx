@@ -6,9 +6,9 @@ import styled from "styled-components";
 import { StyledSection } from "../styled-components/styled-section";
 import { H1 } from "../styled-components/styled-headers";
 import { Row, Column } from "../styled-components/styled-grid";
-import { Button } from "../styled-components/styled-button";
 import { Label, Input, Form, TextArea } from "../styled-components/styled-form";
 import { breakpoints } from "../styled-components/themes";
+import { navigate } from "gatsby";
 
 const FormButton = styled(Input)`
   width: 20vw;
@@ -68,7 +68,6 @@ const ContactPage = () => {
     <Layout>
       <main style={{ paddingTop: "10vh" }}>
         <title>Contact</title>
-
         <StyledSection>
           <H1>Get in Touch!</H1>
           <Form
@@ -77,7 +76,7 @@ const ContactPage = () => {
             netlify-honeypot="bot-field"
             data-netlify="true"
             style={{ margin: "0 auto" }}
-            action="#"
+            action="/success"
           >
             <Row center>
               <Column minSpan={12}>

@@ -174,7 +174,19 @@ const SEO: React.FC<Props> = ({
 
   return (
     <>
-      <Helmet title={seo.title}>
+      <Helmet
+        title={seo.title}
+        link={
+          seo.url
+            ? [
+                {
+                  rel: "canonical",
+                  href: seo.url,
+                },
+              ]
+            : []
+        }
+      >
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />

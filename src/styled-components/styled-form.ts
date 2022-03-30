@@ -9,6 +9,10 @@ const Input = styled.input`
   border-width: 2px;
   border-style: outset;
   border-color: ${(props) => props.theme["text"]["secondary"]};
+
+  :focus-visible {
+    outline-color: ${(props) => props.theme["button"]["borderColor"]};
+  }
 `;
 
 const Label = styled.label`
