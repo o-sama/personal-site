@@ -7,7 +7,7 @@
 	baseUrl = "https://o-sama.netlify.app"
 
 	# Path to the sitemap URL (optional, default = /sitemap.xml)
-	sitemapPath = "/sitemap/sitemap-index.xml"
+	sitemapPath = "/sitemap/sitemap-0.xml"
 
 	# Time in seconds to not submit the sitemap after successful submission
 	ignorePeriod = 0
