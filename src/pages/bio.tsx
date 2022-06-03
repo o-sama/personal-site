@@ -1,5 +1,5 @@
 import * as React from "react";
-import resumeFile from "../content/resume.json";
+import bioFile from "../content/bio.json";
 import { Layout } from "../components/layout";
 
 // styles
@@ -15,13 +15,13 @@ import ExperienceSection from "../components/experienceSection";
 import ProjectSection from "../components/projectSection";
 import EducationSection from "../components/educationSection";
 
-const ResumePage = () => {
+const BioPage = () => {
   try {
     return (
-      <Layout headers={Object.keys(resumeFile)}>
+      <Layout headers={Object.keys(bioFile)}>
         <main id="main">
-          <title>Resume</title>
-          <H1>Resume</H1>
+          <title>Bio</title>
+          <H1>Bio</H1>
 
           {/* LANGUAGES */}
           <StyledSection notchBL>
@@ -52,8 +52,8 @@ const ResumePage = () => {
           {/* EXPERIENCE */}
           <StyledSection notchBL notchTR>
             <Row container center>
-              <HiddenAnchor id="PreviousExperience" title="H2" />
-              <H2>Previous Experience</H2>
+              <HiddenAnchor id="Experience" title="H2" />
+              <H2>Experience</H2>
             </Row>
             <Row container center>
               <Column>
@@ -95,4 +95,4 @@ const ResumePage = () => {
   }
 };
 
-export default ResumePage;
+export default BioPage;

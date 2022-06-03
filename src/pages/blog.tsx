@@ -21,39 +21,28 @@ const Tag = styled(Column)`
   text-align: center;
 `;
 
-// const query = graphql`
-//   {
-//     allMdx {
-//       edges {
-//         node {
-//           frontmatter {
-//             title
-//             path
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
 const query = graphql`
   {
-    mdx(id: { eq: "1" }) {
-      id
-      body
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date(formatString: "MMMM DD, YYYY")
+            tags
+          }
+        }
+      }
     }
   }
 `;
 
 const BlogsPage = () => {
   const postQueryResults = useStaticQuery(query);
-  const posts =
-    postQueryResults.length > 1
-      ? postQueryResults["allMdx"]["edges"].map(
-          (e: any) => e["node"]["frontmatter"]
-        )
-      : [];
+  const posts = postQueryResults["allMdx"]["edges"].map(
+    (e: any) => e["node"]["frontmatter"]
+  );
 
   return (
     <Layout>

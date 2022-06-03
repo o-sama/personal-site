@@ -20,8 +20,8 @@ module.exports = {
         link: "/",
       },
       {
-        name: "Resume",
-        link: "/resume",
+        name: "Bio",
+        link: "/bio",
       },
       {
         name: "Projects",

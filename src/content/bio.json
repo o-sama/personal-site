@@ -34,12 +34,20 @@
       "embedBadgeSrc": "https://cdn.credly.com/assets/utilities/embed.js"
     }
   ],
-  "Previous Experience": [
+  "Experience": [
+    {
+      "position": "Site Reliability Engineer",
+      "company": "Assurance IQ",
+      "logo": "Assurance",
+      "dateRange": "June 2022 - Present",
+      "locaiton": "Toronto, Ontario, Canada",
+      "description": []
+    },
     {
       "position": "Software Engineer - GitOps",
       "company": "Thomson Reuters",
       "logo": "Tr",
-      "dateRange": "May 2020 - Present",
+      "dateRange": "May 2020 - June 2022",
       "locaiton": "Toronto, Ontario, Canada",
       "description": [
         "Architected and led development of new <strong>Kubernetes</strong> Ingress Pattern using Network Load Balancers and created a zero-downtime migration procedure moving from existing Classic Load Balancers on large scale clusters in production environments using <strong>Istio</strong> and <strong>Terraform</strong>.",

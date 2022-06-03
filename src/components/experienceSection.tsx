@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import resumeFile from "../content/resume.json";
+import bioFile from "../content/bio.json";
 import { iconMap } from "../assets";
 
 // styles
@@ -13,7 +13,7 @@ interface Props {}
 
 const iconColsLight: { [key: string]: any } = {};
 const iconColsDark: { [key: string]: any } = {};
-resumeFile["Previous Experience"].map((exp) => {
+bioFile["Experience"].map((exp) => {
   const ComponentLight = styled(iconMap[exp["logo"]]["lightMode"])`
     height: 9.25vw;
     width: 9.25vw;
@@ -80,7 +80,7 @@ const ExperienceSection: FC<Props> = () => {
   const theme = useTheme();
   return (
     <>
-      {resumeFile["Previous Experience"].map((exp) => {
+      {bioFile["Experience"].map((exp) => {
         return (
           <Row key={exp["position"]} style={{ textAlign: "center" }}>
             <Column>

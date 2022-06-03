@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import resumeFile from "../content/resume.json";
+import bioFile from "../content/bio.json";
 
 // styles
 import { Column, Row } from "../styled-components/styled-grid";
@@ -11,7 +11,7 @@ interface Props {}
 const ProjectSection: FC<Props> = () => {
   return (
     <>
-      {resumeFile["Projects"].map((proj) => {
+      {bioFile["Projects"].map((proj) => {
         return (
           <Column key={proj["name"]}>
             <Row center>

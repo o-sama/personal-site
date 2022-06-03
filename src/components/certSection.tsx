@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import resumeFile from "../content/resume.json";
+import bioFile from "../content/bio.json";
 
 // styles
 import { Row, Column } from "../styled-components/styled-grid";
@@ -45,7 +45,7 @@ const CertEmbed = ({
 const CertSection: FC<Props> = () => {
   return (
     <div>
-      {resumeFile["Certifications"].map((cert) => {
+      {bioFile["Certifications"].map((cert) => {
         return (
           <React.Fragment key={cert["certification"]}>
             <Column>

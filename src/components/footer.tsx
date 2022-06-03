@@ -49,27 +49,27 @@ Object.entries(socials).map((e: { [key: string]: any }) => {
         `${props.theme["transition"]["function"]} ${props.theme["transition"]["length"]}`};
   `;
   const ComponentDark = styled(e[1]["darkMode"])`
-    height: 5vw;
-    width: 5vw;
+    height: 5.25vw;
+    width: 5.25vw;
 
     @media only screen and (min-width: ${breakpoints["s"]}) {
-      width: 4vw;
-      height: 4vw;
+      width: 4.5vw;
+      height: 4.5vw;
     }
 
     @media only screen and (min-width: ${breakpoints["m"]}) {
-      width: 3.25vw;
-      height: 3.25vw;
+      width: 3.75vw;
+      height: 3.75vw;
     }
 
     @media only screen and (min-width: ${breakpoints["l"]}) {
-      height: 2.5vw;
-      width: 2.5vw;
+      height: 3vw;
+      width: 3vw;
     }
 
     @media only screen and (min-width: ${breakpoints["xl"]}) {
-      width: 2vw;
-      height: 2vw;
+      width: 2.6vw;
+      height: 2.6vw;
     }
 
     :hover {

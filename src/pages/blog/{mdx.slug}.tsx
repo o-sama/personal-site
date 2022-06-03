@@ -18,13 +18,12 @@ export const query = graphql`
       id
       slug
       body
+      frontmatter {
+        date
+        title
+      }
     }
   }
 `;
-
-// frontmatter {
-//         date
-//         title
-//       }
 
 export default Post;

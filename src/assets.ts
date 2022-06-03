@@ -43,6 +43,7 @@ import downloadDark from "./images/downloaddark.svg";
 import downloadFile from "./content/resume.pdf";
 import website from "./images/website.png";
 import Datadog from "./images/datadog.svg";
+import Assurance from "./images/assurance.svg";
 
 interface Icon {
   [key: string]: { [key: string]: any };
@@ -79,6 +80,7 @@ const iconMap: Icon = {
   Flipp: { lightMode: Flipp, darkMode: Flipp },
   Lh: { lightMode: Lh, darkMode: Lh },
   Datadog: { lightMode: Datadog, darkMode: Datadog },
+  Assurance: { lightMode: Assurance, darkMode: Assurance },
 };
 
 const socials: Icon = {

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import resumeFile from "../content/resume.json";
+import bioFile from "../content/bio.json";
 import { iconMap } from "../assets";
 
 // styles
@@ -12,8 +12,8 @@ import { light } from "../styled-components/themes";
 interface Props {}
 
 const courseCols: JSX.Element[][] = [[], []];
-resumeFile["Education"]["specialtyCourses"].map((e) => {
-  courseCols[resumeFile["Education"]["specialtyCourses"].indexOf(e) % 2].push(
+bioFile["Education"]["specialtyCourses"].map((e) => {
+  courseCols[bioFile["Education"]["specialtyCourses"].indexOf(e) % 2].push(
     <StyledListItem key={e}>{e}</StyledListItem>
   );
 });
@@ -24,16 +24,16 @@ const EducationSection: FC<Props> = () => {
   return (
     <>
       <Row center>
-        <H3>{resumeFile["Education"]["school"]}</H3>
+        <H3>{bioFile["Education"]["school"]}</H3>
       </Row>
       <Row secondary center>
-        {resumeFile["Education"]["degree"]}
+        {bioFile["Education"]["degree"]}
       </Row>
       <Row secondary center>
-        {resumeFile["Education"]["location"]}
+        {bioFile["Education"]["location"]}
       </Row>
       <Row secondary center>
-        <i>{resumeFile["Education"]["graduationDate"]}</i>
+        <i>{bioFile["Education"]["graduationDate"]}</i>
       </Row>
       <Row
         style={{
